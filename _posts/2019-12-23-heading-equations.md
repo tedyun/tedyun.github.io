@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Math Equation Test"
+title: "Heading and Equations"
 mathjax: true
 ---
 
