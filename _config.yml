@@ -60,6 +60,11 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
+author:
+  name: "T. Yun"
+  url: "https://tyun.io"
+  email:
+
 defaults:
   -
     scope:
