@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Heading and Equations"
+title: "Headings and Equations"
 mathjax: true
 ---
 
