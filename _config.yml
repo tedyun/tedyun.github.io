@@ -73,5 +73,6 @@ defaults:
     values:
       layout: "post"
       author: "T. Yun"
+      comments: true
 
 disqus: tyun
