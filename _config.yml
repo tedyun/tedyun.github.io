@@ -32,7 +32,7 @@ google_analytics: UA-2991177-6
 # theme: minima
 remote_theme: tedyun/jekyll-tale
 
-permalink: /p/:year/:title
+permalink: /p/:year/:title/
 paginate: 5
 
 plugins:
