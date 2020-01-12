@@ -6,15 +6,15 @@ mathjax: true
 
 # First heading
 
-Normal text.
+Text.
 
 ## Second heading
 
-Normal text.
+Text.
 
 ### Third heading
 
-Normal text.
+Text.
 
 #### Fourth heading
 
