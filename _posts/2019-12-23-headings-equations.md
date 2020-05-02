@@ -10,11 +10,11 @@ Text.
 
 ## Second heading
 
-Text.
+Text..
 
 ### Third heading
 
-Text.
+Text...
 
 #### Fourth heading
 
