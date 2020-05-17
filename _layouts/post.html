@@ -21,10 +21,10 @@ layout: default
 
     {% if page.date %}
       <br />
-      <span>on&nbsp;</span><time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
-      {% if page.last_modified_at %}
-        <span>last updated on&nbsp;</span><time datetime="{{ page.last_modified_at }}">{{ page.last_modified_at | date: "%B %d, %Y" }}</time>
+      <span>on <time datetime="{{ page.date }}">{{ page.date | date: "%b %d, %Y" }}</time>{% if page.last_modified_at %},
+        last updated on <time datetime="{{ page.last_modified_at }}">{{ page.last_modified_at | date: "%b %d, %Y" }}</time>
       {% endif %}
+      </span>
     {% endif %}
   </div>
 
