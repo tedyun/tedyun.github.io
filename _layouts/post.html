@@ -23,7 +23,6 @@ layout: default
       <br />
       <span>on&nbsp;</span><time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
       {% if page.last_modified_at %}
-        <br />
         <span>last updated on&nbsp;</span><time datetime="{{ page.last_modified_at }}">{{ page.last_modified_at | date: "%B %d, %Y" }}</time>
       {% endif %}
     {% endif %}
