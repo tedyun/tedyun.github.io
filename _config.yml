@@ -75,6 +75,6 @@ defaults:
       author: "T. Yun"
       comments: true
       mathjax: false
-      vis: true
+      vis: false
 
 disqus: tyun
