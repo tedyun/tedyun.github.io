@@ -2,6 +2,7 @@
 layout: post
 title: "Headings and Equations"
 mathjax: true
+last_modified_at: 2020-05-17 0:00:00 +0000
 ---
 
 ## Second heading
