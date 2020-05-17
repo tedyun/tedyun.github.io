@@ -4,10 +4,6 @@ title: "Headings and Equations"
 mathjax: true
 ---
 
-# First heading
-
-Text.
-
 ## Second heading
 
 Text..
