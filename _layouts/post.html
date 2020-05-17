@@ -2,6 +2,10 @@
 layout: default
 ---
 
+{% if page.vis %}
+  {% include vis_lib.html %}
+{% endif %}
+
 {% if page.mathjax %}
   {% include mathjax.html %}
 {% endif %}
