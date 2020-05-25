@@ -31,3 +31,4 @@ gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 # Required for "tale" theme
 gem "jekyll-remote-theme", "~> 0.4.2"
 gem "jekyll-paginate"
+gem "jekyll-seo-tag"
