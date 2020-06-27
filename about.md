@@ -5,7 +5,7 @@ author: "T. Yun"
 permalink: /about/
 ---
 
-![Profile picture](/assets/images/me.jpg){: width="200px" style="float: left"}
+![Profile picture](/assets/images/me.jpg){: width="300px"}
 
 My name is Taedong Yun, also known as Ted, and I am a mathematician, a data scientist, and a software engineer.
 
