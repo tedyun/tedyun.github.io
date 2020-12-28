@@ -11,7 +11,7 @@ Text..
 
 ### Third heading
 
-Text....
+Text...
 
 #### Fourth heading
 
