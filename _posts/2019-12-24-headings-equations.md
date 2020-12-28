@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Headings and Equations"
-mathjax: true
+math: true
 last_modified_at: 2020-05-17 0:00:00 +0000
 ---
 
