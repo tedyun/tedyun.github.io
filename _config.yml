@@ -79,3 +79,4 @@ defaults:
       vis: false
 
 disqus: tyun
+enable_disqus: true

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Draft example"
-comments: false
+title: "[Draft] This is a draft"
+math: true
 ---
 The drafts should go in the `drafts` directory.

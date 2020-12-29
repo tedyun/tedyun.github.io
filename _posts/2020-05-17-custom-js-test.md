@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "Adding custom javascript"
+title: "[Unpublished] Adding custom javascript"
 vis: true
+published: false
 ---
 
 # We test adding custom HTML and javascript here.

@@ -1,0 +1,2 @@
+# Disable disqus comments when run locally.
+enable_disqus: false
