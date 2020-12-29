@@ -252,10 +252,10 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
-  x86_64-darwin-19
+  ruby
 
 DEPENDENCIES
   github-pages
 
 BUNDLED WITH
-   2.2.3
+   2.1.4
