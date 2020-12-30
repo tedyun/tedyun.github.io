@@ -2,7 +2,14 @@
 
 ## Setting up local environment
 
-1. Install `rbenv`. Can use [rbenv-installer](https://github.com/rbenv/rbenv-installer#rbenv-installer).
+1. Install `rbenv`.
+  * Use [rbenv-installer](https://github.com/rbenv/rbenv-installer#rbenv-installer) (`curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash`).
+  * Add the following lines in `~/.bashrc`:
+```
+# Ruby and rbenv (tedyun)
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+```
 2. Check the preferred Ruby version in [this page](https://pages.github.com/versions/), install & activate that version of Ruby using `rbenv`.
 3. Run `setup.sh`.
 
