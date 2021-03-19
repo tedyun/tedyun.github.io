@@ -11,4 +11,4 @@ My name is Taedong Yun, also known as Ted, and I am a mathematician, a data scie
 
 I currently work for [Google Research & Health](https://research.google/people/TaedongYun/), but **all opinions expressed here are solely my own and do not express the views or opinions of my employer**.
 
-Contact: [Twitter](https://twitter.com/tedyun), [LinkedIn](https://www.linkedin.com/in/tedyun/), [GitHub](https://github.com/tedyun).
+Contact: <a href="https://twitter.com/tedyun"><i class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/in/tedyun/"><i class="fab fa-linkedin"></i></a> <a href="https://github.com/tedyun"><i class="fab fa-github"></i></a>
