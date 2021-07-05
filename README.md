@@ -4,7 +4,7 @@
 
 1. Install `rbenv`.
   * Use [rbenv-installer](https://github.com/rbenv/rbenv-installer#rbenv-installer) (`curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash`).
-  * Add the following lines in `~/.bashrc`:
+  * Add the following lines in `~/.bashrc` (linux) or `~/.bash_profile` (Mac OS):
 ```
 # Ruby and rbenv (tedyun)
 export PATH="$HOME/.rbenv/bin:$PATH"
