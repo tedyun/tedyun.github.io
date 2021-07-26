@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Draft] This is a draft"
+title: "[Draft] Draft template"
 math: true
 ---
-The drafts should go in the `drafts` directory.
+The drafts should go in the `_drafts` directory.
