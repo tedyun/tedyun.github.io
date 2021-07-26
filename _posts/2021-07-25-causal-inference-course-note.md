@@ -94,7 +94,7 @@ It is also less clear what a causal effect of an immutable variable would mean.
 
 Example: Causal effect of race, gender, or age?
 
-When we think of potential outcome $Y_a$, we imagine that we could, hypothetically, set treatment to $A = a$ and then see an outcome. With immutable variables this is not as well defined.
+When we think of potential outcome $Y^a$, we imagine that we could, hypothetically, set treatment to $A = a$ and then see an outcome. With immutable variables this is not as well defined.
 
 ### Manipulable vs. not manipulable
 
