@@ -138,8 +138,8 @@ The _fundamental problem of causal inference_ is that we can only observe one po
 ### Average causal effect
 
 Given a population of interest, consider the following hypothetical worlds:
-* World 1: Everyone gets $A = 0$ => compute mean($Y$).
-* World 2: Everyone gets $A = 1$ => compute mean($Y$).
+* World 1: Everyone gets $A = 0$ $\implies$ compute mean($Y$).
+* World 2: Everyone gets $A = 1$ $\implies$ compute mean($Y$).
 
 _Average causal effect_ is the difference between mean($Y$) in World 1 and mean($Y$) in World 2. Formally we can write this as:
 
