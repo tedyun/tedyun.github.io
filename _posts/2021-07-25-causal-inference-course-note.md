@@ -10,6 +10,13 @@ This is my note for the "_A Crash Course in Causality: Inferring Causal Effects 
 
 ---
 
+<!--
+  Define LaTeX macros. Note double backslashes before bangs to escape.
+-->
+\\(
+  \newcommand{\indep}{\perp \\!\\!\\! \perp}
+\\)
+
 # Week 1
 
 ## A brief history
@@ -219,7 +226,7 @@ $$Y = Y^a \text{ if } A = a, \text{ for all } a.$$
 
 The _ignorability_ assumption, also called "_no unmeasured confounders_" assumption: Given pre-treatment covariates $X$, treatment assignment is independent from the potential outcomes. Formally,
 
-$$Y^0, Y^1 \perp \!\!\! \perp A ~\vert~ X$$
+$$Y^0, Y^1 \indep A ~\vert~ X$$
 
 Among people with the same values of $X$, we can think of treatment $A$ as being "randomly" assigned. Here, "random" just means being independent of the potential outcomes.
 
@@ -356,7 +363,88 @@ In the coming weeks, we will explore several popular methods for estimating caus
 
 # Week 2
 
-TODO.
+## Confounding
+
+We are interested in the relationship between means of different potential outcomes, e.g. $E(Y^1 - Y^0)$. To get this from observational data, we make several assumptions, including ignorability:
+
+$$Y^0, Y^1 \indep A ~\vert~ X$$
+
+Suppose treatment assignment depends on the potential outcomes (e.g. "sicker" patients are more likely to be treated). In that case:
+* Treated patients higher risk of bad outcomes.
+* Need to account for these pre-treatment differences in health.
+  * Suppose $X$ are **measures of health**: history of various of various diseases, age, weight, smoking, alcohol, etc.
+  * **Within levels of $X$** (i.e. people of the same age, weight, etc.), it might be the case the "sicker" patients are *not* more likely to get treatment. This is ignorability.
+
+**Confounders** are often defined as variables that affect treatment and affect the outcome.
+
+Examples:
+* If treatment was assigned based on a coin flip, then that affects treatment but should not affect outcome. So the coin flip is _not_ a confounder.
+* If people with a family history of cancer are more likely to develop cancer (the outcome), but family history was not a factor in the treatment decision, then family history is _not_ a confounder.
+* If older people are at higher risk of cardiovascular disease (the outcome) and are more likely to receive statins (the treatment), then age _is_ a confounder.
+
+### Confounder control
+
+We are interested in:
+1. Identifying a set of variables $X$ that will make the ignorability assumption hold. If we do this, then $X$ is **sufficient to control for confounding**.
+2. Using statistical methods to control for these variables and estimate causal effects (later in the course).
+
+### Causal graphs
+
+Which variables to control for is not a simple question. We'd like to identify a set of variables $X$ that will achieve ignorability - i.e. a set that is sufficient to control for confounding. Causal graphs will help answer this question and formalize the key ideas.
+
+## Causal graphs
+
+### Motivation
+
+Graphs (causal graphs or directed acyclic graphs) are considered useful for causal inference.
+* Helpful for identifying which variables to control for.
+* Makes assumptions explicit.
+
+In this lecture we will present basic information of graphical models.
+
+### Simple graphs
+
+$A \longrightarrow Y$ is a _directed graph_, which shows that $A$ affects $Y$. The direction of the arrow shows that $A$ affects $Y$.
+
+$A ~ --- ~ Y$ is an _undirected graph_, which shows that $A$ and $Y$ are associated with each other.
+
+### Graphical models
+* Encode assumptions about relationships among variables. Graphs tells us which variables are independent, conditionally independent, etc.
+* Can be used to derive nonparametric causal effect estimators (later in the course).
+
+### Terminology
+
+$$A \longrightarrow Y$$
+
+* This shows that $A$ affects $Y$.
+* $A$ and $Y$ are called **nodes** or **vertices** (we can think of them as variables).
+* The link (**edge**) between $A$ and $Y$ is an arrow, which means there's a direction.
+* This is a **directed graph**, because all links between variables are directed.
+* Variables connected by an edge are **adjacent**.
+* A **path** is a way to get from one vertex to another, traveling along edges.
+
+### Directed acyclic graphs (DAGs)
+
+A graph is a **directed acyclic graph (DAG)** if it has no undirected edges and no cycles.
+
+* More terminology in DAGs: **parents**, **children**, **ancestors**, **descendants**.
+
+Ultimately, we will use DAGs to help us determine the set of variables that we need to control for to achieve ignorability. Before we get there, we need to understand the relationship between DAGs and probability distributions.
+
+### Relationship between DAGs and probability distributions
+
+DAGs encode assumptions about dependencies between nodes/variables. Specifically a DAG will tell us:
+* which variables are _independent_ from each other.
+* which variables are _conditionally independent_ from each other.
+* ways that we can factor and simplify the joint distribution.
+
+Example 1.
+
+$$D \rightarrow A \rightarrow B ~~~~~ C$$
+
+A DAG involving nodes $A$, $B$, $C$, and $D$ encodes assumptions about the joint distribution $P(A, B, C, D)$. This DAG implies:
+* $P(C \vert A, B, D) = P(C)$, i.e. $C$ is independent of all variables.
+* $P(B \vert A, C, D) = P(B \vert A))$, i.e. $$B \indep D, C ~\vert~ A$$
 
 # Week 3
 
