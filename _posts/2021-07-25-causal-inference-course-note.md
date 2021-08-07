@@ -444,7 +444,160 @@ $$D \rightarrow A \rightarrow B ~~~~~ C$$
 
 A DAG involving nodes $A$, $B$, $C$, and $D$ encodes assumptions about the joint distribution $P(A, B, C, D)$. This DAG implies:
 * $P(C \vert A, B, D) = P(C)$, i.e. $C$ is independent of all variables.
-* $P(B \vert A, C, D) = P(B \vert A))$, i.e. $$B \indep D, C ~\vert~ A$$
+* $P(B \vert A, C, D) = P(B \vert A))$, i.e. $B \indep D, C ~\vert~ A$
+* $P(B \vert D) \neq P(B)$, i.e. $B$ and $D$ are (marginally) dependent.
+* $P(D \vert A, B, C) = P(D \vert A)$.
+
+### Decomposition of joint distribution
+
+We can decompose the joint distribution by sequential conditioning only on sets of parents.
+1. Start with _roots_ (nodes with no parents).
+2. Proceed down the descendant line, always conditioning on parents.
+
+Example.
+
+$$D \rightarrow A \rightarrow B ~~~~~ C$$
+
+The decomposition based on this DAG is: $P(A, B, C, D) = P(C) P(D) P(A \vert D) P(B \vert A)$
+
+
+### Compatibility between DAGs and Distributions
+
+A DAG admits a **factorization** of probability distribution as shown above. We say that this probability function and this DAG are **compatible**.
+
+Example. The following DAG and the probability function are compatible.
+* $A \leftarrow D \rightarrow B \rightarrow C$, $A \rightarrow C$
+* $P(A, B, C, D) = P(D)P(A \vert D) P(B \vert D) P(C \vert A, B)$
+
+Note that DAGs that are compatible with a particular probability function are not necessarily unique.
+
+Simple example: $A \rightarrow B$ and $B \rightarrow A$ both convey that $A$ and $B$ are dependent.
+
+## Paths and associations
+
+### Types of paths
+
+* **Forks**: $D \leftarrow E \rightarrow F$
+* **Chains**: $D \rightarrow E \rightarrow F$
+* **Inverted forks**: $D \rightarrow E \leftarrow F$
+
+### When do paths induce associations?
+
+If nodes $A$ and $B$ are on the ends of a path, they are associated (via this path) if:
+* Some information flows to both of them.
+* Information from one makes it to the other.
+
+In a fork, information flows to both ends of the fork. In a chain, information from one makes it ot the other.
+
+However, in an _inverted fork_ $A \rightarrow G \leftarrow B$, information from $A$ and $B$ collide at $G$. Here $G$ is known as a **collider**. In this case, $A$ and $B$ both affect $G$ but information does not flow from $G$ to either $A$ or $B$. Hence, $A$ and $B$ are independent (if this was the only path between them).
+
+More generally, if there is a collider anywhere on a path from $A$ to $B$, then no association between $A$ and $B$ comes from that path.
+
+## Conditional independence (d-separation)
+
+### Blocking
+
+Paths can be **blocked** by _conditioning_ on nodes in the path.
+
+Consider the path: $A \rightarrow G \rightarrow B$. If we condition on $G$ (a node in the middle of a chain), we block the path from $A$ and $B$.
+
+Association on a fork can also be blocked. Consider the path: $A \leftarrow G \rightarrow B$. If we condition on $G$, this path from $A$ to $B$ is blocked.
+
+The opposite situation occurs if a <u>collider is conditioned on</u>. Consider the path: $A \rightarrow G \leftarrow B$. Here $A$ and $B$ are not associated via this path (information collides at $G$). However, <u>conditioning on $G$ induces an association between $A$ and $B$</u>.
+
+### Conditioning on colliders
+
+Suppose that
+* $A$ is the state of an on/off switch.
+* $B$ is the state of a different on/off switch.
+* $G$ is whether the lightbulb is lit up.
+* $A$ and $B$ are determined from separate, independent coin flips. $G$ is lit up only if **both** $A$ and $B$ are in the on state.
+
+Then,
+* $A$ and $B$ are (marginally) independent.
+* $A$ and $B$ are dependent _given_ $G$. If I tell you that the light is off ($G$), then $A$ must be off if $B$ is on, and vice versa.
+
+### d-separation
+
+A path is **d-separated** (here "d" means dependency) by a set of nodes $C$ if:
+* it contains a chain and the middle part is in $C$, **or**
+* it contains a fork and the middle part is in $C$, **or**
+* it contains an inverted fork and the middle part is not in $C$, nor are any descendants of the middle part.
+
+Two nodes, $A$ and $B$, are **d-separated** by a set of nodes $C$ if it _blocks every path_ from $A$ to $B$. Then,
+
+$$A \indep B ~\vert~ C$$
+
+Recall the ignorability assumption: $Y^0, Y^1 \indep A ~\vert~ X$. Our goal is to identify a set of variables $X$ that will create this conditional independence.
+
+## Confounding revisited
+
+### Confounders
+
+Recall that the informal definition of a confounder is: "a variable that affects both the treatment and the outcome". This is a simple DAG where $X$ is a confounder between the relationship between treatment $A$ and outcome $Y$:
+
+$$X \rightarrow A \rightarrow Y, ~ X \rightarrow Y$$
+
+### Controlling for confounding
+
+We want to identify a set of variables that are sufficient to control for confounding. To do this, we need to block _backdoor paths_ from treatment to outcome. We'll learn what that means.
+
+### Frontdoor paths
+
+A **frontdoor path** from $A$ to $Y$ is one that begins with an arrow emanating out of $A$.
+
+Example 1. $X \rightarrow A \rightarrow Y,~ X \rightarrow Y$
+* $A \rightarrow Y$ is a frontdoor path from $A$ to $Y$
+* Here $A$ directly affects $Y$
+
+Example 2. $X \rightarrow A \rightarrow Z \rightarrow Y,~ X \rightarrow Y$
+* $A \rightarrow Z \rightarrow Y$ is a frontdoor path from $A$ to $Y$.
+* Here $A$ affects $Y$ indirectly through its effect on $Z$.
+
+If we are interested in the causal effect of $A$ on $Y$, we should _not_ control for $Z$ in Example 2. We care about the question "if we manipulate $A$, how is $Y$ affected?" Controlling for $Z$ would be controlling for an effect of treatment.
+
+Note. _Causal mediation analysis_ involves understanding frontdoor paths from $A$ to $Y$. This will not be covered in this course.
+
+### Backdoor paths
+
+**Backdoor paths** from treatment $A$ to outcome $Y$ are paths from $A$ to $Y$ that travel through arrows going into $A$.
+
+Example. $X \rightarrow A \rightarrow Y,~ X \rightarrow Y$
+* Here, $A \leftarrow X \rightarrow Y$ is a backdoor path from $A$ to $Y$.
+
+Backdoor paths confound the relationship between $A$ and $Y$. These need to be blocked.
+
+To sufficiently control for confounding, we must identify a set of variables that block all backdoor paths from treatment to outcome. If $X$ is this set of variables, then we have $Y^0, Y^1 \indep A ~\vert~ X$, i.e. ignorability of treatment mechanism given $X$.
+
+In the next lectures, we will discuss two criteria for identifying sets of variables that are sufficient to control for confounding:
+* Backdoor path criterion
+* Disjunctive cause criterion
+
+## Backdoor path criterion
+
+### Sufficient sets of confounders
+
+A set of variables $X$ is sufficient to control for confounding if:
+* it blocks all backdoor paths from treatment to the outcome
+* it does not include any descendants of treatment
+
+This is the **backdoor path criterion**.
+
+Example 1. $V \rightarrow A \rightarrow Y,~ V \rightarrow W \rightarrow Y$
+* There is one backdoor path from $A$ to $Y$ ($A \leftarrow V \rightarrow W \rightarrow Y$).
+* It is not blocked by a collider.
+* Sets of variables that are sufficient to control for confounding: $\\{V\\}$, $\\{W\\}$, or $\\{V, W\\}$.
+
+Example 2. $V \rightarrow A \rightarrow Y,~ V \rightarrow M \leftarrow W \rightarrow Y$.
+* There is one backdoor path from $A$ to $Y$, but it is blocked by a collider $M$. So no confounding.
+* However, if $M$ is controlled for, it opens a path between $V$ an $W$.
+* Sets of variables that are sufficient to control for confounding: $\\{\\}$, $\\{V\\}$, $\\{W\\}$, $\\{M, V\\}$, $\\{M, W\\}$ or $\\{M, V, W\\}$. (But _not_ $\\{M\\}$.)
+
+For a real example of a causal DAG, see Figure 1 in [Vahratian et al. 2005](https://doi.org/10.1016/j.annepidem.2005.02.005) for example (treatment = "maternal pre-pregnancy overweight and obesity", outcome = "cesarean delivery").
+
+## Disjunctive cause criterion
+
+TODO.
 
 # Week 3
 
