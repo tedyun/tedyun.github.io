@@ -10,13 +10,6 @@ This is my note for the "_A Crash Course in Causality: Inferring Causal Effects 
 
 ---
 
-<!--
-  Define LaTeX macros. Note double backslashes before bangs to escape.
--->
-\\(
-  \newcommand{\indep}{\perp \\!\\!\\! \perp}
-\\)
-
 # Week 1
 
 ## A brief history
