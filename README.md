@@ -10,8 +10,16 @@
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 ```
-2. Check the preferred Ruby version in [this page](https://pages.github.com/versions/), install & activate that version of Ruby using `rbenv`.
+2. Check the preferred Ruby version in [this page](https://pages.github.com/versions/), install & activate that version of Ruby using `rbenv`. For example:
+```
+$ rbenv install 2.7.3
+$ rbenv global 2.7.3
+```
 3. Run `setup.sh`.
+
+## Starting a local server
+
+After setting up local environment as above, run `run_server.sh`.
 
 ## Usage
 

@@ -48,3 +48,7 @@ layout: default
 
   <a href="#" class="top">Top</a>
 </div>
+
+{% if site.enable_disqus and page.comments %}
+  {% include disqus_counter.html %}
+{% endif %}

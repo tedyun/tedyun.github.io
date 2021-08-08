@@ -78,5 +78,6 @@ defaults:
       mathjax: false
       vis: false
 
+# Disqus site ID, e.g. tyun for tyun.disqus.com.
 disqus: tyun
 enable_disqus: true
