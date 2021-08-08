@@ -3,7 +3,7 @@
 ## Setting up local environment
 
 1. Install `rbenv`.
-  * Use [rbenv-installer](https://github.com/rbenv/rbenv-installer#rbenv-installer) (`curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash`).
+  * Use [rbenv-installer](https://github.com/rbenv/rbenv-installer#rbenv-installer) (`curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash`).
   * Add the following lines in `~/.bashrc` (Linux) or `~/.bash_profile` (Mac OS):
 ```
 # Ruby and rbenv (tedyun)
