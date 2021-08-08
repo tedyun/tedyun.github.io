@@ -437,7 +437,7 @@ $$D \rightarrow A \rightarrow B ~~~~~ C$$
 
 A DAG involving nodes $A$, $B$, $C$, and $D$ encodes assumptions about the joint distribution $P(A, B, C, D)$. This DAG implies:
 * $P(C \vert A, B, D) = P(C)$, i.e. $C$ is independent of all variables.
-* $P(B \vert A, C, D) = P(B \vert A))$, i.e. $B \indep D, C ~\vert~ A$
+* $P(B \vert A, C, D) = P(B \vert A)$, i.e. $B \indep D, C ~\vert~ A$
 * $P(B \vert D) \neq P(B)$, i.e. $B$ and $D$ are (marginally) dependent.
 * $P(D \vert A, B, C) = P(D \vert A)$.
 
