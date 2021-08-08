@@ -590,9 +590,128 @@ For a real example of a causal DAG, see Figure 1 in [Vahratian et al. 2005](http
 
 ## Disjunctive cause criterion
 
-TODO.
+### Variable selection
+
+One method for choosing variables to control for is the **disjunctive cause criterion** ([VanderWeele & Shpitser 2011](https://doi.org/10.1111/j.1541-0420.2011.01619.x)) The criterion is simple:
+* Control for all (observed) causes of the exposure, the outcome, or both.
+
+Investigators do not need to know the whole graph, but rather, the list of variables that affect exposure or outcome.
+
+If there is a set of observed variables that satisfy the backdoor path criterion, then <u>the variables selected based on the disjunctive cause criterion will be sufficient to control for confounding</u>.
+
+
+### Examples
+
+Assume the following:
+* Observed pre-treatment variables: $\\{M, W, V\\}$.
+* Unobserved pre-treatment variables: $\\{U_1, U_2\\}$.
+* $W$ and $V$ are causes of $A$, $Y$, or both.
+* $M$ is not a cause of either $A$ or $Y$.
+
+Let's compare two methods for selecting variables in various hypothetical DAGs:
+1. Use _all_ pre-treatment covariates: $\\{M, W, V\\}$ in this example.
+2. Use variables based on disjunctive cause criterion: $\\{W, V\\}$ in this example.
+
+<u>Hypothetical DAG 1</u>. $V \rightarrow A \rightarrow Y,~ M \leftarrow V \rightarrow W \rightarrow Y$
+1. Use all pretreatment covariates $\\{M, W, V\\}$.
+   * Satisfies backdoor path criterion? YES.
+2. Use variables based on disjunctive cause criterion: $\\{W, V\\}$.
+   * Satisfies backdoor path criterion? YES.
+
+<u>Hypothetical DAG 2</u>. $V \rightarrow A \rightarrow Y,~ V \rightarrow M \leftarrow W \rightarrow Y$
+1. Use all pretreatment covariates $\\{M, W, V\\}$.
+   * Satisfies backdoor path criterion? YES.
+2. Use variables based on disjunctive cause criterion: $\\{W, V\\}$.
+   * Satisfies backdoor path criterion? YES.
+
+<u>Hypothetical DAG 3</u>.
+$W \rightarrow A \rightarrow Y \leftarrow V,~ A \dashleftarrow U_1 \dashrightarrow M \dashleftarrow U_2 \dashrightarrow Y$ (Dashed arrows mean unobserved.)
+1. Use all (observed) pretreatment covariates $\\{M, W, V\\}$.
+   * Satisfies backdoor path criterion? **NO**.
+2. Use variables based on disjunctive cause criterion: $\\{W, V\\}$.
+   * Satisfies backdoor path criterion? YES.
+
+<u>Hypothetical DAG 4</u>.
+$M,~ W \dashleftarrow U_1 \dashrightarrow A \rightarrow Y \leftarrow V,~ W \dashleftarrow U_2 \dashrightarrow Y,~ W \rightarrow Y$ (Dashed arrows mean unobserved.)
+1. Use all (observed) pretreatment covariates $\\{M, W, V\\}$.
+   * Satisfies backdoor path criterion? **NO**.
+2. Use variables based on disjunctive cause criterion: $\\{W, V\\}$.
+   * Satisfies backdoor path criterion? **NO**.
+
+### Summary
+
+The disjunctive cause criterion:
+* does not always select the smallest set of variables to control for,
+* but it is conceptually simpler,
+* is guaranteed to select a set of variables that are sufficient to control for confounding **if**
+  * such a set exists,
+  * we correctly identified all observed causes of $A$ and $Y$.
+
+Once we know which variables to control for, the question now is _how_ to control for them. General approaches include: **matching** and **inverse probability of treatment weighting**. We will discuss these later in the course.
 
 # Week 3
+
+## Observational studies
+
+### Set up
+
+Consider the following simple DAG: $X \rightarrow A \rightarrow Y \leftarrow X$. In this case, $X$ is sufficient to control for confounding. In other words, the ignorability assumption holds: $Y^0, Y^1 \indep A ~\vert~ X$.
+
+### Randomized trials
+
+In a randomized trial, treatment assignment $A$ would be determined by a coin toss. This effectively erase the arrow from $X$ to $A$.
+* Observational: $X \rightarrow A \rightarrow Y \leftarrow X$.
+* Randomization: $A \rightarrow Y \leftarrow X$. (No backdoor path from $A$ to $Y$.)
+
+In a randomized trial, the distribution of $X$ will be the same in both treatment groups. In other words: \\
+(Marginal distribution of $X$) \\
+= (Distribution of X given $A=0$) \\
+= (Distribution of X given $A=1$).
+
+Distribution of pre-treatment variables $X$ that affect $Y$ are the same in both treatment groups. This is called **covariate balance**. Thus, if the outcome distribution ends up differing, it will not be because of differences in $X$. Here $X$ is dealt with at the experiment _design phase_.
+
+### Why not always randomize?
+
+* Randomized trials are expensive.
+* Sometimes randomizing treatment/exposure is unethical (e.g. forcing people to smoke).
+* Some/many people will refuse to participate in trials.
+* Randomized trials take time (because you have to wait for outcome data). In some cases by the time you have outcome data, the question might no longer be relevant.
+
+### Observational studies
+
+Two types of observational studies:
+1. Planned, prospective, observational studies with _active_ data collection.
+   * Like trials: data collected on a common set of variables at planned times; outcomes carefully measured; study protocols.
+   * Unlike trials: regulations much weaker, since not intervening; broader population eligible for the study.
+2. Databases, retrospective, _passive_ data collection ("passive" means the research investigators aren't actively collecting data; data are already being collected for some other reason):
+   * e.g. electronic medical records, claims, registries.
+   * Large sample sizes; inexpensive; potential for rapid analysis.
+   * Data quality typically lower. No uniform standard of collection.
+
+In an observational studies, the distribution of $X$ will differ between treatment groups. For example, older people may be more likely to get $A=1$.
+
+### Matching
+
+**Matching** is a method that attempts to make an observational study more like a randomized trial. The main idea is to match individuals in the treatment group ($A = 1$) to individuals in the control group ($A = 0$) on the covariates $X$.
+
+For example, let's think about the case where older people are more likely to get $A = 1$. In a randomized trial, for any particular age, there should be about the same number of treated and untreated people. By matching treated people to control people of the same age, there will be about the same number of treated and controls at any age.
+
+### Advantages of matching
+
+* Controlling for confounders is achieved at the design phase (i.e. without looking at the outcome). The difficult statistical work can be done completely <u>blinded to the outcomes</u>.
+* Matching will reveal lack of overlap in covariate distribution. Specifically, <u>positivity assumption</u> will hold in the population that can be matched.
+* Once the data are matched, we can essentially treat the study as if from a randomized trial.
+* Outcome analysis can be simple.
+
+
+## Overview of matching
+
+### Single covariate
+
+Suppose hypertensive patients are more likely to be treated than patients without hypertension.
+
+TODO.
+
 
 ## Propensity score
 
