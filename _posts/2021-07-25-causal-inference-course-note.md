@@ -777,7 +777,7 @@ Example. Suppose we have three covariates: age, COPD (1=yes, 0=no), sex (1=femal
 | 43.63 | 0 | 0 | 2.89 |
 | 18.04 | 0 | 1 | 3.60 |
 
-In this case we would match the treated subject with the second control subject in the table.
+In this case we would match the treated subject with the second control subject in the table with the lowest distance.
 
 ### Robust Mahalanobis distance
 
