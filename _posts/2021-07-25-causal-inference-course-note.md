@@ -649,6 +649,7 @@ The disjunctive cause criterion:
 
 Once we know which variables to control for, the question now is _how_ to control for them. General approaches include: **matching** and **inverse probability of treatment weighting**. We will discuss these later in the course.
 
+
 # Week 3
 
 ## Observational studies
@@ -659,7 +660,7 @@ Consider the following simple DAG: $X \rightarrow A \rightarrow Y \leftarrow X$.
 
 ### Randomized trials
 
-In a randomized trial, treatment assignment $A$ would be determined by a coin toss. This effectively erase the arrow from $X$ to $A$.
+In a randomized trial, treatment assignment $A$ would be determined by a coin toss. This effectively erases the arrow from $X$ to $A$.
 * Observational: $X \rightarrow A \rightarrow Y \leftarrow X$.
 * Randomization: $A \rightarrow Y \leftarrow X$. (No backdoor path from $A$ to $Y$.)
 
@@ -708,7 +709,100 @@ For example, let's think about the case where older people are more likely to ge
 
 ### Single covariate
 
-Suppose hypertensive patients are more likely to be treated than patients without hypertension.
+Suppose hypertensive patients are more likely to be treated than patients without hypertension, and that hypertension is the only covariate. In this case, we can match each hypertensive patient in the treated group with a hypertensive patient in the control group, and the same for non-hypertensive patients.
+
+### Many covariates
+
+When we have many covariates (some of them may be continuous), we probably will not be able to exactly match on the full set of covariates.
+
+In a randomized trial, treated and control subjects are not perfect matches either. Instead, the _distribution_ of covariates is balanced between groups (**stochastic balance**).
+
+Similarly in observational studies, matching closely on covariates can achieve stochastic balance. For example, suppose we have two covariates we would like to control for: sex (M/F) and age. For each individual in the treated group, we can try to find an individual in the control groups whose sex and age are close to the one in the treated group.
+
+### Target population
+
+Notice that in the examples above, we are making the distribution of covariates in the control population look like that in the _treated_ population. So what we will ultimately estimate if we follow this procedure is a **causal effect of treatment on the treated**.
+
+Often in matching we focus on the causal effect of treatment on the treated, if you start with the treatment group and then find an individual in the control group who matches as above. You can do matching where you try to make the treated and control populations not only look like each other, but look like the population as whole, with slightly more complicated techniques. These matching methods that can be used to target a different population will not be discussed in this section.
+
+### Fine balance
+
+Sometimes it is difficult to find great matches. We might be willing to accept some non-ideal matches if treated and control groups have same (marginal) distribution of covariates. This is called **fine balance**.
+
+Example.
+* Match 1: {treated, male, age 40} and {control, female, age 45}.
+* Match 2: {treated, female, age 45} and {control, male, age 40}.
+
+In this case the average age and the percentage of female are the same in both groups, even though neither match is great. So we achieved fine balance here.
+
+There is a lot of software that can impose fine balance constraints on matches.
+
+### Number of matches
+
+* **One to one** (pair matching): Match exactly one control to every treated subject.
+* **Many to one**: Match some fixed some number $K$ controls to every treated subject (e.g. 5 to 1 matching).
+* **Variable**: Sometimes match 1, sometimes more than 1, control to treated subjects.
+  * Example: If multiple good matches available, use them. If not, do not.
+
+In general one-to-one matching should result in better matching, but you are discarding some data so you may lose efficiency.
+
+
+## Matching directly on confounders
+
+### How to match?
+
+Since we typically cannot match exactly, we first need to choose some metric of closeness. We will consider two options (for now):
+
+* _Mahalanobis distance_ (or _M distance_)
+* _Robust Mahalanobis distance_ (or _robust M distance_) ([Rosenbaum 2009](https://doi.org/10.1007/978-1-4419-1213-8))
+
+### Mahalanobis distance
+
+Denote by $X_j$ a vector of covariates for subject $j$. The _Mahalanobis distance_ between covariates for subject $i$ and subject $j$ is:
+
+$$D(X_i, X_j) = \sqrt{(X_i - X_j)^\top S^{-1} (X_i - X_j)}$$
+
+where $S = \text{cov}(X)$ is the covariance matrix and $X$ is the random vector of covariates. We can roughly think of $S^{-1}$ as a scaling factor where we scale by the unit of measure of each covariate.
+
+This could be thought of as the square root of the sum of squared distances between each covariate scaled by the covariance matrix. We need to scale because what "big difference" means is relative.
+
+Example. Suppose we have three covariates: age, COPD (1=yes, 0=no), sex (1=female, 0=male), and we are trying to match a treated subject with age=78.17, COPD=0, and sex=1.
+
+| Age | COPD | Sex | **Distance** |
+|-|-|-|-|
+| 70.25 | 1 | 0 | 4.23 |
+| 75.33 | 0 | 1 | **0.17** |
+| 86.08 | 1 | 1 | 3.72 |
+| 54.97 | 0 | 0 | 2.45 |
+| 43.63 | 0 | 0 | 2.89 |
+| 18.04 | 0 | 1 | 3.60 |
+
+In this case we would match the treated subject with the second control subject in the table.
+
+### Robust Mahalanobis distance
+
+Motivation: **Outliers** can create large distances between subjects, even if the covariates are otherwise similar. Hence, the **ranks** might be more relevant than the raw values of the covariates. For example the highest and the second hightest ranked values of covariates perhaps should be treated as similar, even if the values are far apart.
+
+_Robust Mahalanobis distance_:
+* Replace each covariate value with its rank.
+* Use constant diagonal on covariance matrix (ranks should all be on the same scale).
+* Calculate the usual Mahalanobis distance on the ranks.
+
+### Other distance measures
+
+If you want an exact match on a few important covariates, you can essentially make the distance infinity if they are not equal.
+
+We can also compute distance on _propensity score_ (will be discussed later).
+
+### What next?
+
+Once you have a distance score, how to select matches?
+
+* _Greedy_ (or _nearest neighbor_) matching: Not optimal, but computationally fast.
+* _Optimal_ matching: Better, but computationally demanding.
+
+
+## Greedy (nearest-neighbor) matching
 
 TODO.
 
