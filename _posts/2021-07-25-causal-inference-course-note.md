@@ -10,6 +10,13 @@ This is my note for the "_A Crash Course in Causality: Inferring Causal Effects 
 
 ---
 
+**Table of Contents**
+
+* Table of contents.
+{:toc}
+
+---
+
 # Week 1
 
 ## A brief history
@@ -804,8 +811,274 @@ Once you have a distance score, how to select matches?
 
 ## Greedy (nearest-neighbor) matching
 
-TODO.
+### Set-up
+Assume that:
+* You have selected a set of pre-treatment covariates $X$ that (hopefully) satisfy the **ignorability** assumption.
+* You have calculated a **distance** $d_{ij}$ between each treated subject with every control subject.
+* You have many **more controls** than treated subjects (this is often the case).
+* We are going to focus on **pair (one-to-one) matching** for now.
 
+### Greedy matching
+
+Steps:
+1. Randomly order list of treated subjects and control subjects.
+2. Start with the first treated subject. Match to the control with the smallest distance (this is "greedy").
+3. Remove the matched control from the list of available matches.
+4. Move on to the next treated subject. Match to the control with the smallest distance.
+5. Repeat steps 3 and 4 until you have matched all treated subjects.
+
+Greedy matching is:
+* Intuitive.
+* Computationally fast. Involves a series of simple algorithms (identifying minimum distance), fast even for large data sets. R package: _MatchIt_
+* Not invariant to initial order of list.
+* Not optimal. Always taking the smallest distance match does not minimize the total distance. Can lead to some bad matches.
+
+### Many-to-one matching
+
+For k:1 matching,
+* After everyone has 1 match, go through the list again and find 2nd matches. Repeat until k matches.
+
+Tradeoffs:
+* Pair matching:
+  * Closer matches
+  * Faster computing time
+* Many-to-one:
+  * Larger sample size.
+* Largely a bias-variance tradeoff issue.
+
+### Caliper
+
+We might prefer to exclude treated subjects for whom there does not exist a good match. A bad match can be defined using a **caliper** - maximum acceptable distance.
+* Only match a treated subject if the best match has distance less than the caliper.
+* Recall _positivity assumption_: probability of each treatment given $X$ should be non-zero.
+  * If no matches within caliper, it is a sign that positivity assumption would be violated.
+  * Excluding these subjects makes assumption more realistic.
+  * Drawback: population is harder to define ("_all treated subjects except for those for whom there is no match available_"?).
+
+
+## Optimal matching
+
+### Greedy matching is not optimal
+
+Greedy matching does not lead to the smallest total distance.
+
+Example. Suppose we want to match on age. We have 3 treated subjects and 12 control subjects.
+* Age (treated): 45, 38, 41.
+* Age (control): 72, 47, 44, 54, 60, 36, 63, 71, 35, 56, 65, 27.
+
+Greedy matches:
+
+| Treated | Control |
+|-|-|
+| 45 | 44 |
+| 38 | 36 |
+| 41 | 47 |
+
+Total distance: $1 + 2 + 6 = 9$.
+
+Better matches:
+
+| Treated | Control |
+|-|-|
+| 45 | 47 |
+| 38 | 36 |
+| 41 | 44 |
+
+Total distance: $2 + 2 + 3 = 7$.
+
+### Optimal matching
+
+Optimal matching minimizes _global_ distance measure, e.g. total distance. This is computationally demanding: **Network flow optimization problem** ([Rosenbaum 1989](https://doi.org/10.2307/2290079); [Hansen & Klopfer 2006](https://doi.org/10.1198/106186006X137047))
+
+R packages: _optmatch_, _rcbalance_.
+
+### Computational feasibility
+
+Feasibility to perform optimal matching depends on the size of the problem. Size is primarily measured by the number of possible **treatment-control pairings**.
+
+For example, 100 treated subject and 1000 controls results in 100,000 possible pairings.
+* 1 million treatment-control pairings is feasible on most computers.  (Do not expect an answer quickly, however.)
+* 1 billion pairings (e.g. 10,000 treated patients and 100,000 control subjects) likely is not.
+
+### Sparse optimal matching
+
+Constraints can be imposed to make optimal matching computationally feasible for larger data sets. For example:
+* Match within hospitals in a multi-site clinical study.
+* Match within primary disease category.
+* These are "blocks".
+
+This is known as sparse matching ([Pimentel et al. 2015](https://doi.org/10.1080/01621459.2014.997879)). This can be done with _rcbalance_ R package for example. Mismatches can be tolerated if fine balance can still be achieved.
+
+
+## Assessing balance
+
+### Did matching work?
+
+After you have matched, you should assess whether matching seemed to work.
+* Covariate balance - "standardized differences". Similar means?
+* This can/should be done without looking at the outcome.
+
+Commonly, a "Table 1" is created, where pre-matching and post-matching balance is compared.
+
+### Hypothesis tests and p-values
+
+One could assess balance with hypothesis tests, i.e. test for a difference in means between treated and controls for each covariate:
+* **Two sample t-test** for continuous covariates
+* **Chi-square test** for discrete covariates
+
+and report $p$-value for each test.
+
+Drawbacks:
+* $p$-values are dependent on **sample size**.
+* Small differences in means will have a small $p$-value if the sample size is large. We probably do not care much if mean differences are small.
+
+### Standardized differences
+
+A **standardized (mean) difference** is the difference in means between groups, divided by the (pooled) standard deviation.
+
+$$SMD = \frac{\overline{X}_{treatment} - \overline{X}_{control}}{\sqrt{\frac{s^2_{treatment} + s^2_{control}}{2}}}$$
+
+Note:
+* SMD does not depend on sample size.
+* Often, absolute absolute value of smd is reported.
+* Calculate for each variable that you match on.
+* Rules of thumb:
+  * Values <0.1 indicate adequate balance.
+  * Values 0.1-0.2 are not too alarming.
+  * Values >0.2 indicate serious imbalance.
+
+### "Table 1"
+
+Example. Right heart catheterization (RHC) data.
+
+**Unmatched**:
+
+|  | No RHC | RHC | SMD |
+| n | 3551 | 2184 |  |
+|-|-|-|-|
+| age (mean (sd)) | 61.8 (17.3) | 60.8 (15.6) | 0.06 |
+| sex = Male (%) | 53.9 | 58.5 | 0.09 |
+| resp = Yes (%) | 41.7 | 28.9 | 0.27 |
+| card = Yes (%) | 28.4 | 42.3 | 0.30 |
+| neuro = Yes (%) | 16.2 | 5.4 | 0.35 |
+
+**Matched**:
+
+|  | No RHC | RHC | SMD |
+| n | 2082 | 2082 |  |
+|-|-|-|-|
+| age (mean (sd)) | 61.6 (16.7) | 61.0 (15.8) | 0.039 |
+| sex = Male (%) | 56.9 | 56.9 | 0.001 |
+| resp = Yes (%) | 30.6 | 30.4 | 0.005 |
+| card = Yes (%) | 39.3 | 39.5 | 0.004 |
+| neuro = Yes (%) | 5.3 | 5.7 | 0.015 |
+
+### SMD plot
+
+We can plot SMDs, for example, in a parallel coordinate chart, where two lines correspond to matched vs. unmatched covariate SMDs and a standard cutoff (for example 0.1) is drawn as a straight line.
+
+
+## Analyzing data after matching
+
+### After matching
+
+After successfully matching and achieving adequate balance, proceed with outcome analysis.
+* Test for a treatment effect.
+* Estimate a treatment effect and confidence interval.
+* Methods should take matching into account.
+
+### Randomization tests
+
+**Randomization tests** are also known as **permutation tests** or **exact tests**. The main idea is:
+* Compute test statistic from observed data.
+* Assume null hypothesis of no treatment effect is true.
+* Randomly permute treatment assignment within pairs and re-compute test statistic.
+* Repeat many times and see how unusual observed statistic is.
+
+### Randomization test example
+
+Suppose we have a binary outcome and 13 matched pairs. We will use as the test statistic <u>the number of events in the treated group</u>.
+
+Observed data:
+
+| Matched pair | Treated | Control |
+|-|-|-|
+| 1 | 0 | 0 |
+| 2 | 1 | 0 |
+| 3 | 1 | 0 |
+| 4 | 0 | 0 |
+| 5 | 1 | 1 |
+| 6 | 0 | 0 |
+| 7 | 0 | 1 |
+| 8 | 0 | 1 |
+| 9 | 0 | 0 |
+| 10 | 1 | 0 |
+| 11 | 0 | 0 |
+| 12 | 1 | 0 |
+| 13 | 1 | 0 |
+
+Test statistic: **6**. Would this number be unusual if null was true? We answer this question by randomly permuting the values in each row.
+
+Randomly permuted data:
+
+| Matched pair | Treated | Control |
+|-|-|-|
+| 1 | 0 | 0 |
+| 2 | 1 | 0 |
+| 3 | **0** | **1** |
+| 4 | 0 | 0 |
+| 5 | 1 | 1 |
+| 6 | 0 | 0 |
+| 7 | **1** | **0** |
+| 8 | 0 | 1 |
+| 9 | 0 | 0 |
+| 10 | **0** | **1** |
+| 11 | 0 | 0 |
+| 12 | 1 | 0 |
+| 13 | 1 | 0 |
+
+Test statistic: **5**.
+
+If we permute like this 1,000 times and record the test statistic each time, we will get a distribution of the test statistic. We want to know how _unusual_ our observed data value is given the distribution. To compute the $p$-value, we add up all probabilities of the test statistic values as unusual or more unusual than the observed value.
+
+### McNemar test
+
+This test is equivalent to the McNemar test for paired data. First we create a table of treated/control outcomes (columns: control outcomes, rows: treated outcomes):
+
+| Outcomes | 1 | 0 |
+| 1 | 1 | 5 |
+| 0 | 2 | 5 |
+
+Now we can compute the $p$-value using this R code:
+```
+ex <- matrix(c(1, 5, 2, 5), 2, 2)
+mcnemar.test(ex)
+```
+
+$p$-value for the above example is 0.4497 (not significant). This will roughly be the same as using permutation.
+
+### Continuous data
+
+The basic approach also works for continuous data. Suppose you have a systolic blood pressure (SBP) outcome data from 20 treatment-control pairs. Let the test statistic be the difference in sample means.
+
+Similarly we can randomly permute labels and re-calculate the difference in sample means of SBP, and do this for 1,000 times.
+
+We could also use a **paired t-test** for continuous data. For example in R,
+```
+t.test(txsbp, consbp, paired=TRUE)
+```
+
+### Other outcome models
+
+Some examples of other outcome models:
+* **Conditional logistic regression**: Matched binary outcome data.
+* **Stratified Cox model**: Time-to-event (survival) outcome data. Baseline hazard function stratified on matched sets.
+* **Generalized estimating equations (GEE)**: Match ID variable used to specify clusters. For binary outcomes, can estimate a causal risk difference, causal risk ratio, or causal odds ratio, depending on link function (identity link for a causal risk difference, log link for a causal risk ratio).
+
+
+## Sensitivity analysis
+
+TODO
 
 ## Propensity score
 
