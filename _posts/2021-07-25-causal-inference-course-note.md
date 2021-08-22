@@ -1078,9 +1078,232 @@ Some examples of other outcome models:
 
 ## Sensitivity analysis
 
-TODO
+### Possible hidden bias
+
+Matching aims to achieve balance on _observed_ covariates. Overt bias could occur if there was imbalance on observed covariates (i.e. we did not fully control for these variables).
+
+However, there is no guarantee that matching will result in balance on variables that we did not match on (including unobserved variables). If these unobserved variables are confounders, then we have _hidden_ bias (i.e. ignorability assumption violated; unmeasured confounding).
+
+### Sensitivity analysis
+
+Main idea: If there is hidden bias, determine how severe it would have to be to **change conclusions**. For example,
+* Change from statistically significant to not.
+* Change in direction of effect.
+
+Let $\pi_j$ be the probability that person $j$ receives treatment, and the same for $\pi_k$. Suppose person $j$ and $k$ are perfectly matched, so that their observed covariates, $X_j$ and $X_k$, are the same. If $\pi_j = \pi_k$, then there is no hidden bias.
+
+Consider the following inequality:
+
+$$\frac{1}{\Gamma} \leq \frac{\frac{\pi_j}{1 - \pi_j}}{\frac{\pi_k}{1 - \pi_k}} \leq \Gamma$$
+
+* The middle term is the odds ratio, and we select $\Gamma \geq 1$.
+* If $\Gamma = 1$, then this implies the odds ratio is $1$, no overt bias.
+* $\Gamma > 1$ implies hidden bias.
+
+Suppose we have evidence of a treatment effect. Note that this is under the assumption that $\Gamma = 1$, i.e. no hidden bias.
+
+We can then increase $\Gamma$ until evidence of treatment effect goes away (e.g. no longer statistically significant). If, say, this happens when $\Gamma = 1.1$, then the conclusion is **very sensitive** to unmeasured confounding (hidden bias). If this does not happen until $\Gamma = 5$, then the conclusion is **not very sensitive** to hidden bias.
+
+The actual methods to perform these analyses are beyond the scope of this course, but more details can be found at [Rosenbaum 2009](https://doi.org/10.1007/978-1-4419-1213-8). R packages: _sensitivity2x2xk_, _sensitivityfull_.
+
+
+## Data example in R
+
+Right heart catheterization data, publicly available [here](https://hbiostat.org/data/) (Note: The link included in the lecture video is outdated). ICU patients in 5 hospitals.
+
+* **Treatment**: right heart catheterization (rhc) vs. not
+* **Outcome**: death (yes/no)
+* **Confounders**: demographics, insurance, disease diagnoses, etc.
+* 2184 treated and 3551 controls.
+
+### First steps
+
+Load packages, read in data, view data:
+
+```R
+#install packages
+install.packages("tableone")
+install.packages("Matching")
+
+#load packages
+library(tableone)
+library(Matching)
+
+#read in data
+load(url("https://hbiostat.org/data/repo/rhc.sav"))
+#view data
+View(rhc)
+```
+
+Optionally we can create a new data set: only variables that will be used, convert character to numeric.
+
+```R
+#create a data set with just these variables, for simplicity
+ARF<-as.numeric(rhc$cat1=='ARF')
+CHF<-as.numeric(rhc$cat1=='CHF')
+Cirr<-as.numeric(rhc$cat1=='Cirrhosis')
+colcan<-as.numeric(rhc$cat1=='Colon Cancer')
+Coma<-as.numeric(rhc$cat1=='Coma')
+COPD<-as.numeric(rhc$cat1=='COPD')
+lungcan<-as.numeric(rhc$cat1=='Lung Cancer')
+MOSF<-as.numeric(rhc$cat1=='MOSF w/Malignancy')
+sepsis<-as.numeric(rhc$cat1=='MOSF w/Sepsis')
+female<-as.numeric(rhc$sex=='Female')
+died<-as.numeric(rhc$death=='Yes')
+age<-rhc$age
+treatment<-as.numeric(rhc$swang1=='RHC')
+meanbp1<-rhc$meanbp1
+
+#new dataset
+mydata<-cbind(ARF,CHF,Cirr,colcan,Coma,lungcan,MOSF,sepsis,
+              age,female,meanbp1,treatment,died)
+mydata<-data.frame(mydata)
+
+#covariates we will use (shorter list than you would use in practice)
+xvars<-c("ARF","CHF","Cirr","colcan","Coma","lungcan","MOSF","sepsis",
+         "age","female","meanbp1")
+```
+
+### Create a "Table 1", pre-matching
+
+```R
+#look at a table 1
+table1<- CreateTableOne(vars=xvars,strata="treatment", data=mydata, test=FALSE)
+## include standardized mean difference (SMD)
+print(table1,smd=TRUE)
+```
+
+Results:
+```
+                     Stratified by treatment
+                      0             1             SMD   
+  n                    3551          2184               
+  ARF (mean (SD))      0.45 (0.50)   0.42 (0.49)   0.059
+  CHF (mean (SD))      0.07 (0.25)   0.10 (0.29)   0.095
+  Cirr (mean (SD))     0.05 (0.22)   0.02 (0.15)   0.145
+  colcan (mean (SD))   0.00 (0.04)   0.00 (0.02)   0.038
+  Coma (mean (SD))     0.10 (0.29)   0.04 (0.20)   0.207
+  lungcan (mean (SD))  0.01 (0.10)   0.00 (0.05)   0.095
+  MOSF (mean (SD))     0.07 (0.25)   0.07 (0.26)   0.018
+  sepsis (mean (SD))   0.15 (0.36)   0.32 (0.47)   0.415
+  age (mean (SD))     61.76 (17.29) 60.75 (15.63)  0.061
+  female (mean (SD))   0.46 (0.50)   0.41 (0.49)   0.093
+  meanbp1 (mean (SD)) 84.87 (38.87) 68.20 (34.24)  0.455
+```
+
+### Match
+
+Perform greedy matching and create "Table 1" on matched data:
+
+```R
+#do greedy matching on Mahalanobis distance
+greedymatch<-Match(Tr=treatment,M=1,X=mydata[xvars],replace=FALSE)
+matched<-mydata[unlist(greedymatch[c("index.treated","index.control")]), ]
+
+#get table 1 for matched data with standardized differences
+matchedtab1<-CreateTableOne(vars=xvars, strata ="treatment", 
+                            data=matched, test = FALSE)
+print(matchedtab1, smd = TRUE)
+```
+
+Results:
+```
+                     Stratified by treatment
+                      0             1             SMD   
+  n                    2184          2184               
+  ARF (mean (SD))      0.42 (0.49)   0.42 (0.49)   0.006
+  CHF (mean (SD))      0.10 (0.29)   0.10 (0.29)  <0.001
+  Cirr (mean (SD))     0.02 (0.15)   0.02 (0.15)  <0.001
+  colcan (mean (SD))   0.00 (0.02)   0.00 (0.02)  <0.001
+  Coma (mean (SD))     0.04 (0.20)   0.04 (0.20)  <0.001
+  lungcan (mean (SD))  0.00 (0.05)   0.00 (0.05)  <0.001
+  MOSF (mean (SD))     0.07 (0.26)   0.07 (0.26)  <0.001
+  sepsis (mean (SD))   0.24 (0.43)   0.32 (0.47)   0.177
+  age (mean (SD))     61.53 (16.15) 60.75 (15.63)  0.049
+  female (mean (SD))   0.44 (0.50)   0.41 (0.49)   0.042
+  meanbp1 (mean (SD)) 73.12 (34.28) 68.20 (34.24)  0.144
+```
+
+### Outcome analysis
+
+If we want a causal risk difference, we can carry out a paired t-test. Note that a paired t-test is actually just a regular t-test on the difference in the outcome among matched pairs, so we can just use the standard t-test command on the difference.
+
+```R
+#outcome analysis
+y_trt<-matched$died[matched$treatment==1]
+y_con<-matched$died[matched$treatment==0]
+
+#pairwise difference
+diffy<-y_trt-y_con
+
+#paired t-test
+t.test(diffy)
+```
+
+Results:
+```
+	One Sample t-test
+
+data:  diffy
+t = 3.9289, df = 2183, p-value = 8.799e-05
+alternative hypothesis: true mean is not equal to 0
+95 percent confidence interval:
+ 0.02706131 0.08099730
+sample estimates:
+mean of x 
+0.0540293 
+```
+
+### Causal risk difference
+
+* Point estimate: 0.054 (The course video shows 0.045). Difference in probability of death if everyone received RHC vs. if no one received RHC is 0.054, i.e. higher risk of death in RHC group.
+* 95% CI: (0.027, 0.081) (The course video shows (0.019, 0.072)).
+* p-value: $<0.001$
+
+### McNemar test
+
+```R
+#McNemar test
+table(y_trt,y_con)
+```
+
+Results:
+```
+     y_con
+y_trt   0   1
+    0 303 395
+    1 513 973
+```
+
+* 513+395 discordant pairs.
+* The 513 is when a treated person died and a control person did not.
+
+```R
+mcnemar.test(matrix(c(973,513,395,303),2,2))
+```
+
+Results:
+```
+	McNemar's Chi-squared test with continuity correction
+
+data:  matrix(c(973, 513, 395, 303), 2, 2)
+McNemar's chi-squared = 15.076, df = 1, p-value = 0.0001033
+```
+
+* p-value about the same as from paired t-test ($<0.001$).
+
+### Discussion
+
+* If we wanted a causal risk ratio or causal odds ratio, could use GEE with log or logit link, respectively.
+* We only used a subset of covariates for simplicity. In practice we would want to include more variables.
+* _rcbalance_ package has many more matching options: [_rcbalance_ paper](https://obsstudies.org/wp-content/uploads/2017/06/rcbalance_paper_v7r2.pdf)
+* The _tableone_ package vignette has useful code for creating figures and tables: [link](https://cran.r-project.org/web/packages/tableone/vignettes/smd.html)
+
+
 
 ## Propensity score
+
+TODO
 
 The _propensity score_ is the probability of receiving treatment (rather than control), given covariates $X$. Propensity score $\pi_i$ for a subject $i$ is defined by:
 
