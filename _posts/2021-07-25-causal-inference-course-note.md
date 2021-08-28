@@ -1153,6 +1153,7 @@ died<-as.numeric(rhc$death=='Yes')
 age<-rhc$age
 treatment<-as.numeric(rhc$swang1=='RHC')
 meanbp1<-rhc$meanbp1
+aps<-rhc$aps1
 
 #new dataset
 mydata<-cbind(ARF,CHF,Cirr,colcan,Coma,lungcan,MOSF,sepsis,
@@ -1300,19 +1301,239 @@ McNemar's chi-squared = 15.076, df = 1, p-value = 0.0001033
 * The _tableone_ package vignette has useful code for creating figures and tables: [link](https://cran.r-project.org/web/packages/tableone/vignettes/smd.html)
 
 
+## Propensity scores
 
-## Propensity score
-
-TODO
+### Propensity score
 
 The _propensity score_ is the probability of receiving treatment (rather than control), given covariates $X$. Propensity score $\pi_i$ for a subject $i$ is defined by:
 
 $$\pi_i := P(A = 1 \vert X_i)$$
 
+Suppose age was the only $X$ variable, and older people were more likely to get treatment. This implies the propensity score would be larger for older ages, e.g. $P(A = 1 \vert \text{age} = 60) > P(A = 1 \vert \text{age} = 30)$. More generally,
+
+$$\pi_i > \pi_j \text{ if } \text{age}_i > \text{age}_j$$
+
+If a person $i$ has a propensity score value of 0.3, that means that, given their particular covariate values, there is a 30% chance they will be treated.
+
+### Balancing score
+
+Suppose two subjects have the same value of the propensity score, but they possibly have different covairate values $X$. Despite the different covariate values, they were both equally likely to have been treated. This means both subjects' $X$ is just as likely to be found in the treatment group.
+
 Propensity score is a _balancing score_, i.e. if you restrict to a subpopulation of subjects who have the same value of the propensity score, there should be balance in the two treatment groups. More formally,
 
 $$P(X=x \vert \pi(X)=p, A=1) = P(X=x \vert \pi(X)=p, A=0).$$
 
-This can be proved using Bayes' theorem. This implies that if we match on the propensity score, we should achieve balance. Note that conditioning on the propensity score is conditioning on an **allocation probability**.
+This can be proved using Bayes' theorem. <u>This implies that if we match on the propensity score, we should achieve balance</u>. This makes sense, considering we assumed ignorability - that treatment is randomized given $X$. Note that conditioning on the propensity score is conditioning on an **allocation probability**.
 
-In a randomized trial, the propensity score is generally known, e.g. 0.5. In an observational study, it will be unknown, but we estimate it given the observed data. We estimate the score $P(A=1 \vert X)$ by, for example, fitting a logistic regression model with covariates $X$ and outcome $A$. After fitting the model, the estimated propensity score is the predicted probability (fitted value) for each subject.
+### Estimated propensity score
+
+In a randomized trial, the propensity score is generally known, e.g. $P(A = 1 \vert X) = P(A = 1) = 0.5$.
+
+In an observational study, it will be unknown, but we can estimate it given the observed data (since the propensity score involves only observed data $A$ and $X$). Typically when people talk about a propensity score, they are referring to the **estimated** propensity score.
+
+We estimate the score $P(A=1 \vert X)$ by, for example, fitting a logistic regression model with covariates $X$ and outcome $A$. After fitting the model, the estimated propensity score is the predicted probability (fitted value) for each subject.
+
+
+## Propensity score matching
+
+### Matching
+
+Propensity score is a balancing score, so matching on the propensity score (a scalar value for each subject) should achieve balance. This greatly simplifies matching, since we are only matching on one variable.
+
+### Overlap
+
+Once the propensity score is estimated, but before matching, it is useful to look for overlap. We compare the distribution of the propensity score for treated and control subjects in a plot.
+
+Accross different values of the propensity score we make sure that there is good overlap between control and treated groups. This implies that positivity assumption is reasonable.
+
+If there is poor overlap, we can only hope to learn about causal effects within the ranges of propensity scores where there is good overlap. This is called "trimming the tails", meaning removing subjects who have extreme values of the propensity score. For example we can remove:
+
+* Control subjects whose propensity score is less than the minimum in the treatment group.
+* Treated subjects whose propensity score is greater than the maximum in the control group.
+
+Trimming the tails makes the positivity assumption more reasonable (this prevents extrapolation).
+
+### Back to matching
+
+We can now proceed by computing a distance between the propensity score for each treated subject with every control. Then we can use nearest neighbor or optimal matching, as before.
+
+In practice, **logit** (log-odds) of the propensity score is often used, rather than the propensity score itself (i.e. match on $\text{logit}(\pi)$ rather than $\pi$). The propensity score is bounded between 0 andn 1, making many values seem similar, while the logit of the propensity score is unbounded. This transformation essentially stretches the distribution, while preserving ranks.
+
+### Caliper
+
+To ensure that we do not accept any bad matches, a caliper (maximum distance that we are willing to tolerate) can be used. In practice, a common shoice for a cliper is the 0.2 times the standard deviation of logit of the propensity score. In detail:
+
+1. Estimate the propensity score (e.g. using logistic regression).
+2. Logit-transform the propensity score.
+3. Take the st. dev. of this transformed variable.
+4. Set the caliper to 0.2 times the value from Step 3.
+
+This is commonly done in practice because it seems to work well, but it is somewhat arbitraty. Smaller caliper implies less bias, more variance.
+
+### After matching
+
+The outcome analysis methods can be the same as would be used if matching directly on covariates, e.g. randomization tests, conditional logistic regression, GEE, stratified Cox model, etc.
+
+
+## Propensity score matching in R
+
+### Data example
+
+We use the same right heart catheterization data discussed above.
+
+### Fit propensity score model
+
+Starting from the code discussed previously, we fit a propensity score model (logistic regression):
+
+```R
+#fit a propensity score model. logistic regression
+
+psmodel<-glm(treatment~ARF+CHF+Cirr+colcan+Coma+lungcan+MOSF+
+               sepsis+age+female+meanbp1+aps,
+    family=binomial(),data=mydata)
+
+#show coefficients etc
+summary(psmodel)
+#create propensity score
+pscore<-psmodel$fitted.values
+```
+
+Output:
+
+```
+Coefficients:
+              Estimate Std. Error z value Pr(>|z|)    
+(Intercept) -1.9460154  0.2321291  -8.383  < 2e-16 ***
+ARF          1.2252930  0.1495511   8.193 2.54e-16 ***
+CHF          1.8905642  0.1735687  10.892  < 2e-16 ***
+Cirr         0.4334062  0.2203366   1.967  0.04918 *  
+colcan       0.0481566  1.1242894   0.043  0.96583    
+Coma         0.6842545  0.1878333   3.643  0.00027 ***
+lungcan      0.1984600  0.5055005   0.393  0.69461    
+MOSF         1.0177797  0.1807159   5.632 1.78e-08 ***
+sepsis       1.8402456  0.1561589  11.784  < 2e-16 ***
+age         -0.0030469  0.0017462  -1.745  0.08101 .  
+female      -0.1390768  0.0590139  -2.357  0.01844 *  
+meanbp1     -0.0075166  0.0008707  -8.633  < 2e-16 ***
+aps          0.0182356  0.0017286  10.549  < 2e-16 ***
+```
+
+### Plot propensity score
+
+Now we plot the propensity score, pre-matching, for treated and control groups separately and check overlap (not shown here).
+
+### Matching using "MatchIt" package
+
+We can use `MatchIt` package directly to match (without running logistic regression manually):
+
+```R
+libary(MatchIt)
+
+#use matchit for propensity score, nearest neighbor matching
+m.out <- matchit(treatment~ARF+CHF+Cirr+colcan+Coma+lungcan+MOSF+
+                 sepsis+age+female+meanbp1+aps, data=mydata, method = "nearest")
+summary(m.out)
+
+#propensity score plots
+plot(m.out,type="jitter")
+plot(m.out,type="hist")
+```
+
+### Matching using "Match" package
+
+We can also match on logit(propensity score) using `Match` package, with or without caliper.
+
+Without a caliper:
+
+```R
+#do greedy matching on logit(PS)
+
+logit <- function(p) {log(p)-log(1-p)}
+psmatch<-Match(Tr=mydata$treatment,M=1,X=logit(pscore),replace=FALSE)
+matched<-mydata[unlist(psmatch[c("index.treated","index.control")]), ]
+xvars<-c("ARF","CHF","Cirr","colcan","Coma","lungcan","MOSF","sepsis",
+         "age","female","meanbp1")
+
+#get standardized differences
+matchedtab1<-CreateTableOne(vars=xvars, strata ="treatment", 
+                            data=matched, test = FALSE)
+print(matchedtab1, smd = TRUE)
+```
+
+With a caliper:
+
+```R
+#do greedy matching on logit(PS) using Match with a caliper
+
+logit <- function(p) {log(p)-log(1-p)}
+psmatch<-Match(Tr=mydata$treatment,M=1,X=logit(pscore),replace=FALSE,caliper=.2)
+matched<-mydata[unlist(psmatch[c("index.treated","index.control")]), ]
+xvars<-c("ARF","CHF","Cirr","colcan","Coma","lungcan","MOSF","sepsis",
+         "age","female","meanbp1")
+
+#get standardized differences
+matchedtab1<-CreateTableOne(vars=xvars, strata ="treatment", 
+                            data=matched, test = FALSE)
+print(matchedtab1, smd = TRUE)
+```
+
+Output (with a caliper):
+```
+                     Stratified by treatment
+                      0             1             SMD   
+  n                    1900          1900               
+  ARF (mean (SD))      0.47 (0.50)   0.45 (0.50)   0.036
+  CHF (mean (SD))      0.10 (0.30)   0.10 (0.29)   0.005
+  Cirr (mean (SD))     0.02 (0.16)   0.03 (0.16)   0.007
+  colcan (mean (SD))   0.00 (0.00)   0.00 (0.02)   0.032
+  Coma (mean (SD))     0.04 (0.21)   0.05 (0.21)   0.018
+  lungcan (mean (SD))  0.00 (0.06)   0.00 (0.05)   0.010
+  MOSF (mean (SD))     0.08 (0.28)   0.08 (0.27)   0.017
+  sepsis (mean (SD))   0.26 (0.44)   0.27 (0.44)   0.030
+  age (mean (SD))     60.85 (18.04) 61.08 (15.41)  0.014
+  female (mean (SD))   0.44 (0.50)   0.43 (0.49)   0.018
+  meanbp1 (mean (SD)) 71.87 (34.74) 71.53 (34.85)  0.010
+```
+
+### Outcome analysis
+
+As before, we can perform outcome analysis using t-test as follow:
+
+```R
+#outcome analysis
+y_trt<-matched$died[matched$treatment==1]
+y_con<-matched$died[matched$treatment==0]
+
+#pairwise difference
+diffy<-y_trt-y_con
+
+#paired t-test
+t.test(diffy)
+```
+
+Output:
+```
+	One Sample t-test
+
+data:  diffy
+t = 2.2573, df = 1899, p-value = 0.02411
+alternative hypothesis: true mean is not equal to 0
+95 percent confidence interval:
+ 0.004486724 0.063934329
+sample estimates:
+ mean of x 
+0.03421053 
+```
+
+Without caliper:
+* 2184 matched pairs
+* Causal risk difference: 0.04 (0.012, 0.068)
+
+With caliper:
+* 1900 matched pairs
+* Causal risk difference: 0.03 (0.004, 0.063)
+
+
+## ABC
+
+TODO
