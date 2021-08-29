@@ -1534,6 +1534,43 @@ With caliper:
 * Causal risk difference: 0.03 (0.004, 0.063)
 
 
-## ABC
+# Week 4
 
-TODO
+## Intuition for Inverse Probability of Treatment Weighting (IPTW)
+
+### Motivating example
+
+Suppose there is a single binary confounder $X$. Suppose that $P(A = 1 \vert X = 1)$, i.e. the value of the propensity score for people with $X = 1$ is 0.1 (among people with $X = 1$, only 10% will receive the treatment). Similarly suppose that $P(A = 1 \vert X = 0) = 0.8$
+
+Imagine there are 10 individuals with $X = 1$. Given the above assumption, 9 of them would be in the control group and 1 of them in the treated group. If we do matching, we'd use 1 individual in the treated group and 1 individual in the control group (who now represent all 9 individuals in the control group). Rather than matching, we could use all of the data, but down-weight some and up-weight others.
+
+### Weighting
+
+This is accomplished by weighting by the inverse of the probability of treatment **received**.
+* For treated subjects, weight by the inverse of $P(A = 1 \vert X)$
+* For control subjects, weight by the inverse of $P(A = 0 \vert X)$
+
+This is known as **inverse probability of treatment weighting (IPTW)**.
+
+In the above example with $X = 1$, the person in the treated group will get a weight of 10, while the 9 people in the control group will each get a weight of 10/9.
+
+Similarly if there are 5 people with $X = 0$ in the above example, there will be 4 people in the treatment group and 1 person in the control group. The people in the treated group will each get a weight 5/4, while the person in the control group will get a weight of 5.
+
+## More intuition for IPTW estimation
+
+### Motivation: survey sampling
+
+In surveys it is common to oversample some groups relative to the population. For example,
+* Oversample a minority group
+* Oversample older adults
+* Oversample obese individuals
+
+To estimate the population mean, we can weight the data to account for the oversample. This kind of approach is known as **Horvitz-Thompson estimator**.
+
+### Observational studies
+
+In an observational study, certain groups are oversampled relative to the hypothetical sample from a randomized trial (there is a confounding in the original population).
+
+IPTW creates a _pseudo-population_ where treatment assignment no longer depends on $X$ (no confounding in the pseudo-population).
+
+TODO.
