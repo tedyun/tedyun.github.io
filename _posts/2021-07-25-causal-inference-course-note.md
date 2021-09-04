@@ -1556,6 +1556,7 @@ In the above example with $X = 1$, the person in the treated group will get a we
 
 Similarly if there are 5 people with $X = 0$ in the above example, there will be 4 people in the treatment group and 1 person in the control group. The people in the treated group will each get a weight 5/4, while the person in the control group will get a weight of 5.
 
+
 ## More intuition for IPTW estimation
 
 ### Motivation: survey sampling
@@ -1573,4 +1574,106 @@ In an observational study, certain groups are oversampled relative to the hypoth
 
 IPTW creates a _pseudo-population_ where treatment assignment no longer depends on $X$ (no confounding in the pseudo-population).
 
-TODO.
+### Pseudo-population
+
+Example. Suppose $P(A = 1 \vert X) = 0.9$. If there are 10 people in the original population, 9 of them would be treated and 1 of them would be in control. In this case IPTW applied the weight of 1/0.9 = 10/9 weight to each in the treated group and the weight of 1/0.1 = 10 for the individual in the control group. Now in the pseudo-population (after applying weighting), there will be 10 individuals in both treated and control group.
+
+In the original population, some people were more likely to get treated than others, based on their $X$ values. In the pseudo-population on the other hand, everyone is equally likely to be treated, regardless of their $X$ values.
+
+### Estimator
+
+Under the assumption of exchangeability and positiity, we can estimate $E(Y^1)$ as:
+
+$$\frac{\sum_{i = 1}^n I(A_i = 1) \frac{Y_i}{\pi_i}}{\sum_{i = 1}^n \frac{I(A_i = 1)}{\pi_i}}$$
+
+where $\pi_i = P(A = 1 \vert X_i)$ is the propensity score and $I$ is the indicator function. Note that the numerator is the sum of the $Y$'s in treated _pseudo_-population, and the denominator is the number of subjects in treated _pseudo_-population.
+
+
+## Marginal structural models
+
+### Motivation
+
+Previously we discussed IPTW estimation for simple causal effects, such as an average causal effect. However, IPTW estimation methods can be used more generally to estimate causal effect parameters from models.
+
+### Marginal structural models
+
+A marginal structural model (MSM) is a model for the mean of the _potential outcomes_.
+
+* **Marginal**: model that is not conditional on the confounders (population average).
+* **Structural**: model for potential outcomes, not observed outcomes.
+
+### Linear MSM
+
+Linear MSM is as follows:
+
+$$E(Y^a) = \psi_0 + \psi_1 a, ~ a \in \{0, 1\}$$
+
+In other words,
+* $E(Y^0) = \psi_0$
+* $E(Y^1) = \psi_0 + \psi_1$
+
+So $\psi_1$ is the average causal effect $E(Y^1) - E(Y^0)$.
+
+### Logistic MSM
+
+Logistic MSM for binary outcome is:
+
+$$logit(E(Y^a)) = \psi_0 + \psi_1 a, ~ a \in \{0, 1\}$$
+
+So $exp(\psi_1)$ is the causal odds ratio:
+
+$$\frac{\frac{P(Y^1 = 1)}{1 - P(Y^1 = 1)}}{\frac{P(Y^0 = 1)}{1 - P(Y^0 = 1)}}$$
+
+### MSM with effect modification
+
+MSMs can also include effect modifiers. Suppose $V$ is a variable that modifies the effect of $A$. A linear MSMS with effect modification is:
+
+$$E(Y^a \vert V) = \psi_0 + \psi_1 a + \psi_2 V + \psi_3 aV, ~ a \in \{0, 1\}$$
+
+So $E(Y^1 \vert V) - E(Y^0 \vert V) = \psi_1 + \psi_3 V$.
+
+### General MSM
+
+$$g(E(Y^a \vert V)) = h(a, V; \psi)$$
+
+where $g$ is a link function, $h$ is a function specifying parametric form of $a$ and $V$ (typically additive, linear).
+
+
+## IPTW estimation
+
+### Estimation in regression models
+
+First consider estimation of parameters from a linear regression model:
+
+$$Y = X\beta + \epsilon$$
+
+Esimation involves solving:
+
+$$\sum_{i = 1}^{n} X_i (Y_i - X_i^T \hat{\beta}) = 0$$
+
+for $\hat{\beta}$. This is the value of $\beta$ that minimizes the sum of squared deviations (least squares estimator).
+
+### Estimation in generalized linear models
+
+Now consider estimation of parameters from a generalized linear regression model:
+
+$$E(Y_i \vert X_i) = \mu_i = g^{-1}(X_i^T \beta)$$
+
+Estimation involves solving:
+
+$$\sum_{i = 1}^n \frac{\partial \mu_i^T}{\partial \beta} V_i^{-1} (Y_i - \mu_i(\beta)) = 0$$
+
+for $\beta$.
+
+
+### Estimation in MSMs
+
+Marginal structural models look a lot like generalized linear models. For example:
+
+$$E(Y_i^a) = g^{-1}(\psi_0 + \psi_1 a)$$
+
+This model is **not equivalent** to the regression model
+
+$$E(Y_i \vert A_i) = g^{-1}(\psi_0 + \psi_1 A_i)$$
+
+because of confounding.
