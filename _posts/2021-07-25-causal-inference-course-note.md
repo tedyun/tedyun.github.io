@@ -1720,4 +1720,102 @@ One can show this in "Table 1" (raw & weighted data) or in a plot.
 
 ## Distribution of weights
 
-TODO
+### Why do weights matter?
+
+Larger weights lead to noisier estimates of causal effects. Why?
+
+Suppose 1 person has weight of 10,000. They essentially represent 10,000 people. If the outcome is binary, whether they have the event or not could have a big impact on the parameter estimate. If one person's outcome data can greatly affect the parameter estimate, then the standard error will be large.
+
+### Further intuition: bootstrapping
+
+One way to estimate standard errors is bootstrapping:
+1. Randomly sample, with replacement, from the original sample.
+2. Estimate parameters.
+3. Repeat steps 1 and 2 many times.
+4. The standard deviation of the bootstrap estimates is an estimate of the standard error.
+
+Someone with a very large weight will be included in some bootstrap samples, but not others. Whether or not they are included will have a relatively large impact on the parameter estimates. Thus, a lot of the variability of the estimator would be due to this one subject.
+
+### Relationship with positivity assumption
+
+An extremely large weight means that the probablity of that treatment was very small. Thus, large weights indicate _near violations_ of the positivity assumption, i.e. people with certain values of the covariates are very unlikely to get one of the treatments.
+
+### Checking weights
+
+The easiest way to check the weights is to show the weights in a density histogram or in a plot of sorted weight values vs. index. Or one can get summary statistics of weights with `summary(weight)` command in R for example.
+
+
+## Remedies for large weights
+
+### Very large weights: investigative step
+
+A good first step is to look into why the weights are large. After identifying the subjects who have large weights, ask:
+* What is unusual about them?
+* Is there a problem with their data?
+* Is there a problem with the propensity score model?
+
+### Trimming the tails
+
+Large weights occur at observations in the tails of the propensity score distribution. Trimming the tails can eliminate some of the extreme weights. This means removing subjects who have extreme values of the propensity score. A common trimming strategy:
+* Remove treated subjects whose propensity scores are above the 98th percentile from the distribution among controls.
+* Remove control subjects whose propensity scores are below the 2nd percentile from the distribution of treated subjects.
+
+<u>Reminder</u>: Trimming the tails changes the population.
+
+### Weight truncation
+
+Truncating the large weights is another option. Steps:
+* Determine (ahead of time) a maximum allowable weight. Could be a specific value (e.g. 100) or could be based on a percentile (e.g. 99th).
+* If a weight is greater than the maximum allowable, set it to the maximum allowable value. For example, if your upper limit is 100, and someone has a weight of 10,000, set their weight to 100 instead.
+
+Whether or not to truncate weights involves a bias-variance trade-off:
+* Truncation: bias, but smaller variance.
+* No truncation: unbiased, larger variance.
+
+Truncating extremely large weights can result in estimators with lower mean squared error (MSE).
+
+
+## Doubly robust estimators
+
+### Background: IPTW estimation
+
+We can estimate $E(Y^1)$ using IPTW:
+
+$$\frac{1}{n} \sum_{i = 1}^n \frac{A_i Y_i}{\pi_i(X_i)}$$
+
+If the propensity score is correctly specified, this estimator is unbiased.
+
+### Background: Regression-based estimation
+
+Alternatively, we could estimate $E(Y^1)$ by specifying an outcome model $m_1(X) = E(Y \vert A = 1, X)$ and then averaging over the distribution of X:
+
+$$\frac{1}{n} \sum_{i = 1}^n (A_i Y_i + (1 - A_i) m_1(X_i))$$
+
+* The first term in the sum: For subjects with $A = 1$, use observed $Y$.
+* The second term in the sum: For other subjects, use predicted value of $Y$ given their $X$'s if their $A$ had been 1.
+
+If outcome model is correctly specified, then this estimator is unbiased.
+
+### Doubly robust estimators
+
+A **doubly robust estimator** (also known as augmented inverse probability of treatment weighting) is an estimator that is unbiased if _either_ the propensity score model or the outcome regresison model is correctly specified.
+
+Example (for estimating $Y^1$):
+
+$$\frac{1}{n} \sum_{i = 1}^n \left[\frac{A_i Y_i}{\pi_i(X_i)} - \frac{A_i - \pi_i(X_i)}{\pi_i(X_i)} m_1(X_i)\right]$$
+
+The first term in the sum is IPTW and the second term is "augmentation".
+
+Suppose that propensity score is correctly specified (i.e. $\pi(X) = P(A = 1 \vert X)$), but outcome model is not (i.e. $m_1(X) \neq E(Y \vert A = 1, X)$). In that case, the expectation of $A_i$ term is equal to propensity score so the second term in the term has expectation 0. Then the formula becomes a standard IPTW, so the esimator is unbiased.
+
+Now suppose that propensity score is wrong (i.e. $\pi(X) \neq P(A = 1 \vert X)$), but outcome model is correct (i.e. $m_1(X) = E(Y \vert A = 1, X)$):
+
+$$\begin{align}
+\frac{1}{n} \sum_{i = 1}^n \left[\frac{A_i Y_i}{\pi_i(X_i)} - \frac{A_i - \pi_i(X_i)}{\pi_i(X_i)} m_1(X_i)\right] \\
+= \frac{1}{n} \sum_{i = 1}^n \left[\frac{A_i (Y_i - m_1(X_i))}{\pi_i(X_i)} + m_1(X_i)\right]
+\end{align}$$
+
+In this case the first term in the sum goes to 0 and the second term goes to $E(Y^1)$.
+
+These are also known as augmented IPTW (AIPTW) estimators. One can use semiparametric theory to identify best estimators. In general, AIPTW estimators should be **more efficient** than regular IPTW estimators.
+
