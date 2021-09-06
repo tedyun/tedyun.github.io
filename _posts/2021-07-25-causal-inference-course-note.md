@@ -1690,3 +1690,34 @@ Steps:
 3. Specify the MSM of interest.
 4. Use software to fit a weighted generalized linear model.
 5. Use asymptotic (sandwich) variance estimator (or bootstrapping). This accounts for fact that pseudo-population might be larger than sample size.
+
+
+## Assessing balance
+
+### Balance after weighting
+
+Covariate balance can be checked on the weighted sample using standardized differences. We can use:
+* Table 1
+* Plot
+
+### Standard differences after weighting
+
+Recall that a standardized difference is the difference in means between groups, divided by the (pooled) standard deviation.
+
+$$smd = \frac{\overline{X}_{treatment} - \overline{X}_{control}}{\sqrt{\frac{s^2_{treatment} + s^2_{control}}{2}}}$$
+
+A **standard difference after weighting** is the same idea as the usual standard differences, except on weighted means and weighted variances.
+* Stratify on treatment group: find weighted mean and weighted variance for each group. This can be done directly of with software tools that were developed for surveys (e.g. `svydesign` in R).
+* Take difference in weighted means and divide by an estimate of the pooled (weighted) standard deviation.
+
+One can show this in "Table 1" (raw & weighted data) or in a plot.
+
+### If imbalance after weighting
+
+* Can refine propensity score model. Interactions? Non-linearity?
+* Can then reassess balance.
+
+
+## Distribution of weights
+
+TODO
