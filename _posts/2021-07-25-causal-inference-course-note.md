@@ -3,7 +3,7 @@ layout: post
 title: "Causal inference course note"
 math: true
 published: true
-last_modified_at: 2021-07-25 0:00:00 +0000
+last_modified_at: 2021-09-05 0:00:00 +0000
 ---
 
 This is my note for the "_A Crash Course in Causality: Inferring Causal Effects from Observational Data_" course by [Jason A. Roy](https://sph.rutgers.edu/concentrations/biostatistics-epidemiology/faculty-member.php?id=97108) on [Coursera](https://www.coursera.org/learn/crash-course-in-causality).
@@ -1665,7 +1665,6 @@ $$\sum_{i = 1}^n \frac{\partial \mu_i^T}{\partial \beta} V_i^{-1} (Y_i - \mu_i(\
 
 for $\beta$.
 
-
 ### Estimation in MSMs
 
 Marginal structural models look a lot like generalized linear models. For example:
@@ -1676,4 +1675,18 @@ This model is **not equivalent** to the regression model
 
 $$E(Y_i \vert A_i) = g^{-1}(\psi_0 + \psi_1 A_i)$$
 
-because of confounding.
+because of confounding. However, recall that the **pseudo-population** (obtained from IPTW) is free from confounding (assuming ignorability and positivity). We can therefore estimate MSM parameters by solving estimating equations for the observed data of the pseudo-population:
+
+$$\sum_{i=1}^{n} \frac{\partial \mu_i^T}{\partial \psi} V_i^{-1} W_i (Y_i - \mu_i(\psi)) = 0$$
+
+where $W_i = \frac{1}{A_i P(A = 1 \vert X_i) + (1 - A_i) P(A = 0 \vert X_i)}$.
+
+Steps:
+
+1. Estimate propensity score.
+2. Create weights
+   * 1 divided by propensity score for treated subjects.
+   * 1 divided by 1 minus the propensity score for control subjects.
+3. Specify the MSM of interest.
+4. Use software to fit a weighted generalized linear model.
+5. Use asymptotic (sandwich) variance estimator (or bootstrapping). This accounts for fact that pseudo-population might be larger than sample size.
