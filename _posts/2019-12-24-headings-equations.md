@@ -8,7 +8,7 @@ published: false
 
 ## Second heading
 
-Text..
+Text.
 
 ### Third heading
 
