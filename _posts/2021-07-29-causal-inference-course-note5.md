@@ -27,4 +27,4 @@ This is my note for the "_A Crash Course in Causality: Inferring Causal Effects 
 
 # Week 5. Instrumental Variables Methods
 
-TODO
+TODO.
