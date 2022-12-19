@@ -1,0 +1,607 @@
+city,country,eiu_region,year,value,rank
+Singapore,Singapore,Asia & Australasia,2017,116,1
+New York,US,North America,2017,100,13
+Tel Aviv,Israel,Middle East & Africa,2017,103,9
+Hong Kong,China,Asia & Australasia,2017,111,4
+Los Angeles,US,North America,2017,99,14
+Zurich,Switzerland,Western Europe,2017,112,2
+Geneva,Switzerland,Western Europe,2017,106,6
+San Francisco,US,North America,2017,84,37
+Paris,France,Western Europe,2017,112,2
+Copenhagen,Denmark,Western Europe,2017,105,8
+Sydney,Australia,Asia & Australasia,2017,102,10
+Houston,US,North America,2017,83,41
+Oslo,Norway,Western Europe,2017,107,5
+Minneapolis,US,North America,2017,88,26
+Melbourne,Australia,Asia & Australasia,2017,99,14
+Seattle,US,North America,2017,80,46
+Seoul,South Korea,Asia & Australasia,2017,106,6
+Shanghai,China,Asia & Australasia,2017,92,21
+Amman,Jordan,Middle East & Africa,2017,87,28
+Shenzhen,China,Asia & Australasia,2017,90,23
+Washington DC,US,North America,2017,84,37
+Boston,US,North America,2017,75,56
+Vienna,Austria,Western Europe,2017,96,17
+Vancouver,Canada,North America,2017,83,41
+Pittsburgh,US,North America,2017,79,50
+Chicago,US,North America,2017,83,41
+Helsinki,Finland,Western Europe,2017,95,18
+London,UK ,Western Europe,2017,86,30
+Dublin,Ireland,Western Europe,2017,93,19
+Frankfurt,Germany,Western Europe,2017,93,19
+Milan,Italy,Western Europe,2017,91,22
+Brisbane,Australia,Asia & Australasia,2017,88,26
+Beijing,China,Asia & Australasia,2017,80,46
+Reykjavik,Iceland,Western Europe,2017,99,14
+Dalian,China,Asia & Australasia,2017,83,41
+Tokyo,Japan,Asia & Australasia,2017,101,11
+Wellington,New Zealand,Asia & Australasia,2017,89,24
+Auckland,New Zealand,Asia & Australasia,2017,89,24
+Adelaide,Australia,Asia & Australasia,2017,86,30
+Honolulu,US,North America,2017,77,53
+Moscow,Russia,Eastern Europe,2017,66,86
+Osaka,Japan,Asia & Australasia,2017,101,11
+Munich,Germany,Western Europe,2017,86,30
+Mexico City,Mexico,Latin America & the Caribbean,2017,74,59
+Hamburg,Germany,Western Europe,2017,87,28
+Atlanta,US,North America,2017,69,77
+Barcelona,Spain,Western Europe,2017,85,34
+Madrid,Spain,Western Europe,2017,85,34
+Amsterdam,Netherlands,Western Europe,2017,81,45
+Dusseldorf,Germany,Western Europe,2017,85,34
+Abu Dhabi,UAE,Middle East & Africa,2017,73,62
+Lexington,US,North America,2017,72,66
+Miami,US,North America,2017,74,59
+Cleveland,US,North America,2017,70,75
+Nouméa,New Caledonia,Asia & Australasia,2017,77,53
+Brussels,Belgium,Western Europe,2017,84,37
+Taipei,Taiwan,Asia & Australasia,2017,77,53
+Montreal,Canada,North America,2017,74,59
+Tianjin,China,Asia & Australasia,2017,72,66
+Manchester,UK,Western Europe,2017,75,56
+Rome,Italy,Western Europe,2017,86,30
+Berlin,Germany,Western Europe,2017,80,46
+Suzhou,China,Asia & Australasia,2017,71,72
+Guangzhou,China,Asia & Australasia,2017,73,62
+Perth,Australia,Asia & Australasia,2017,80,46
+Detroit,US,North America,2017,70,75
+St Petersburg,Russia,Eastern Europe,2017,60,98
+Hanoi,Vietnam,Asia & Australasia,2017,72,66
+Phnom Penh,Cambodia,Asia & Australasia,2017,67,82
+Bangkok,Thailand,Asia & Australasia,2017,79,50
+Guatemala City,Guatemala,Latin America & the Caribbean,2017,72,66
+Lyon,France,Western Europe,2017,78,52
+Qingdao,China,Asia & Australasia,2017,73,62
+Dubai,UAE,Middle East & Africa,2017,72,66
+Montevideo,Uruguay,Latin America & the Caribbean,2017,73,62
+Lima,Peru,Latin America & the Caribbean,2017,68,81
+Stockholm,Sweden,Western Europe,2017,84,37
+Dhaka,Bangladesh,Asia & Australasia,2017,71,72
+Ho Chi Minh City,Vietnam,Asia & Australasia,2017,67,82
+Luxembourg,Luxembourg,Western Europe,2017,75,56
+Toronto,Canada,North America,2017,66,86
+Nairobi,Kenya,Middle East & Africa,2017,69,77
+Quito,Ecuador,Latin America & the Caribbean,2017,65,90
+Bahrain,Bahrain,Middle East & Africa,2017,63,93
+San Jose,Costa Rica,Latin America & the Caribbean,2017,65,90
+Prague,Czech Rep,Eastern Europe,2017,67,82
+Santiago,Chile,Latin America & the Caribbean,2017,72,66
+Jakarta,Indonesia,Asia & Australasia,2017,65,90
+Doha,Qatar,Middle East & Africa,2017,59,101
+Athens,Greece,Western Europe,2017,66,86
+Jeddah,Saudi Arabia,Middle East & Africa,2017,57,107
+Lisbon,Portugal,Western Europe,2017,66,86
+Manila,Philippines,Asia & Australasia,2017,59,101
+Kuala Lumpur,Malaysia,Asia & Australasia,2017,60,98
+Bandar Seri Begawan,Brunei,Asia & Australasia,2017,62,95
+Riyadh,Saudi Arabia,Middle East & Africa,2017,52,116
+Kuwait City,Kuwait,Middle East & Africa,2017,59,101
+Muscat,Oman,Middle East & Africa,2017,57,107
+Al Khobar,Saudi Arabia,Middle East & Africa,2017,57,107
+Warsaw,Poland,Eastern Europe,2017,62,95
+Abidjan,Cote d'Ivoire,Middle East & Africa,2017,61,97
+Belgrade,Serbia,Eastern Europe,2017,60,98
+Sofia,Bulgaria,Eastern Europe,2017,51,118
+Rio de Janeiro,Brazil,Latin America & the Caribbean,2017,67,82
+Sao Paulo,Brazil,Latin America & the Caribbean,2017,69,77
+Panama City,Panama,Latin America & the Caribbean,2017,54,111
+Casablanca,Morocco,Middle East & Africa,2017,54,111
+Cairo,Egypt,Middle East & Africa,2017,49,120
+Dakar,Senegal,Middle East & Africa,2017,58,105
+Johannesburg,South Africa,Middle East & Africa,2017,58,105
+Lagos,Nigeria,Middle East & Africa,2017,40,129
+Bogota,Colombia,Latin America & the Caribbean,2017,63,93
+Mumbai,India,Asia & Australasia,2017,49,120
+Asuncion,Paraguay,Latin America & the Caribbean,2017,51,118
+Budapest,Hungary,Eastern Europe,2017,59,101
+Pretoria,South Africa,Middle East & Africa,2017,55,110
+Kathmandu,Nepal,Asia & Australasia,2017,53,115
+Buenos Aires,Argentina,Latin America & the Caribbean,2017,69,77
+Bucharest,Romania,Eastern Europe,2017,48,123
+Lusaka,Zambia,Middle East & Africa,2017,52,116
+Istanbul,Turkey,Western Europe,2017,71,72
+New Delhi,India,Asia & Australasia,2017,48,123
+Caracas,Venezuela,Latin America & the Caribbean,2017,33,131
+Colombo,Sri Lanka,Asia & Australasia,2017,54,111
+Bangalore,India,Asia & Australasia,2017,44,128
+Algiers,Algeria,Middle East & Africa,2017,46,126
+Chennai,India,Asia & Australasia,2017,47,125
+Almaty,Kazakhstan,Eastern Europe,2017,38,130
+Karachi,Pakistan,Asia & Australasia,2017,46,126
+Tashkent,Uzbekistan,Eastern Europe,2017,54,111
+Tehran,Iran,Middle East & Africa,2017,49,120
+Damascus,Syria,Middle East & Africa,2017,26,132
+Singapore,Singapore,Asia & Australasia,2012,135,6
+New York,US,North America,2012,100,27
+Tel Aviv,Israel,Middle East & Africa,2012,98,34
+Hong Kong,China,Asia & Australasia,2012,116,14
+Los Angeles,US,North America,2012,100,27
+Zurich,Switzerland,Western Europe,2012,131,7
+Geneva,Switzerland,Western Europe,2012,124,10
+San Francisco,US,North America,2012,83,64
+Paris,France,Western Europe,2012,125,8
+Copenhagen,Denmark,Western Europe,2012,114,15
+Sydney,Australia,Asia & Australasia,2012,137,3
+Houston,US,North America,2012,83,64
+Oslo,Norway,Western Europe,2012,136,4
+Minneapolis,US,North America,2012,86,57
+Melbourne,Australia,Asia & Australasia,2012,136,4
+Seattle,US,North America,2012,80,69
+Seoul,South Korea,Asia & Australasia,2012,106,21
+Shanghai,China,Asia & Australasia,2012,99,30
+Amman,Jordan,Middle East & Africa,2012,88,54
+Shenzhen,China,Asia & Australasia,2012,94,40
+Washington DC,US,North America,2012,90,47
+Boston,US,North America,2012,78,72
+Vienna,Austria,Western Europe,2012,105,23
+Vancouver,Canada,North America,2012,106,21
+Pittsburgh,US,North America,2012,80,69
+Chicago,US,North America,2012,96,38
+Helsinki,Finland,Western Europe,2012,111,18
+London,UK ,Western Europe,2012,112,16
+Dublin,Ireland,Western Europe,2012,98,34
+Frankfurt,Germany,Western Europe,2012,118,12
+Milan,Italy,Western Europe,2012,102,26
+Brisbane,Australia,Asia & Australasia,2012,117,13
+Beijing,China,Asia & Australasia,2012,88,54
+Reykjavik,Iceland,Western Europe,2012,90,47
+Dalian,China,Asia & Australasia,2012,92,43
+Tokyo,Japan,Asia & Australasia,2012,152,1
+Wellington,New Zealand,Asia & Australasia,2012,108,20
+Auckland,New Zealand,Asia & Australasia,2012,109,19
+Adelaide,Australia,Asia & Australasia,2012,112,16
+Honolulu,US,North America,2012,82,67
+Moscow,Russia,Eastern Europe,2012,91,46
+Osaka,Japan,Asia & Australasia,2012,146,2
+Munich,Germany,Western Europe,2012,98,34
+Mexico City,Mexico,Latin America & the Caribbean,2012,86,57
+Hamburg,Germany,Western Europe,2012,96,38
+Atlanta,US,North America,2012,71,92
+Barcelona,Spain,Western Europe,2012,99,30
+Madrid,Spain,Western Europe,2012,100,27
+Amsterdam,Netherlands,Western Europe,2012,89,51
+Dusseldorf,Germany,Western Europe,2012,93,42
+Abu Dhabi,UAE,Middle East & Africa,2012,75,83
+Lexington,US,North America,2012,78,72
+Miami,US,North America,2012,84,61
+Cleveland,US,North America,2012,72,90
+Nouméa,New Caledonia,Asia & Australasia,2012,103,25
+Brussels,Belgium,Western Europe,2012,99,30
+Taipei,Taiwan,Asia & Australasia,2012,85,60
+Montreal,Canada,North America,2012,99,30
+Tianjin,China,Asia & Australasia,2012,77,79
+Manchester,UK,Western Europe,2012,90,47
+Rome,Italy,Western Europe,2012,97,37
+Berlin,Germany,Western Europe,2012,94,40
+Suzhou,China,Asia & Australasia,2012,78,72
+Guangzhou,China,Asia & Australasia,2012,79,71
+Perth,Australia,Asia & Australasia,2012,120,11
+Detroit,US,North America,2012,73,86
+St Petersburg,Russia,Eastern Europe,2012,86,57
+Hanoi,Vietnam,Asia & Australasia,2012,71,92
+Phnom Penh,Cambodia,Asia & Australasia,2012,64,112
+Bangkok,Thailand,Asia & Australasia,2012,84,61
+Guatemala City,Guatemala,Latin America & the Caribbean,2012,74,84
+Lyon,France,Western Europe,2012,89,51
+Qingdao,China,Asia & Australasia,2012,78,72
+Dubai,UAE,Middle East & Africa,2012,70,95
+Montevideo,Uruguay,Latin America & the Caribbean,2012,77,79
+Lima,Peru,Latin America & the Caribbean,2012,73,86
+Stockholm,Sweden,Western Europe,2012,104,24
+Dhaka,Bangladesh,Asia & Australasia,2012,59,120
+Ho Chi Minh City,Vietnam,Asia & Australasia,2012,70,95
+Luxembourg,Luxembourg,Western Europe,2012,87,56
+Toronto,Canada,North America,2012,90,47
+Nairobi,Kenya,Middle East & Africa,2012,78,72
+Quito,Ecuador,Latin America & the Caribbean,2012,65,107
+Bahrain,Bahrain,Middle East & Africa,2012,65,107
+San Jose,Costa Rica,Latin America & the Caribbean,2012,74,84
+Prague,Czech Rep,Eastern Europe,2012,83,64
+Santiago,Chile,Latin America & the Caribbean,2012,81,68
+Jakarta,Indonesia,Asia & Australasia,2012,77,79
+Doha,Qatar,Middle East & Africa,2012,62,115
+Athens,Greece,Western Europe,2012,78,72
+Jeddah,Saudi Arabia,Middle East & Africa,2012,57,122
+Lisbon,Portugal,Western Europe,2012,78,72
+Manila,Philippines,Asia & Australasia,2012,66,105
+Kuala Lumpur,Malaysia,Asia & Australasia,2012,76,82
+Bandar Seri Begawan,Brunei,Asia & Australasia,2012,69,102
+Riyadh,Saudi Arabia,Middle East & Africa,2012,60,118
+Kuwait City,Kuwait,Middle East & Africa,2012,65,107
+Muscat,Oman,Middle East & Africa,2012,62,115
+Al Khobar,Saudi Arabia,Middle East & Africa,2012,64,112
+Warsaw,Poland,Eastern Europe,2012,71,92
+Abidjan,Cote d'Ivoire,Middle East & Africa,2012,70,95
+Belgrade,Serbia,Eastern Europe,2012,65,107
+Sofia,Bulgaria,Eastern Europe,2012,67,103
+Rio de Janeiro,Brazil,Latin America & the Caribbean,2012,84,61
+Sao Paulo,Brazil,Latin America & the Caribbean,2012,92,43
+Panama City,Panama,Latin America & the Caribbean,2012,56,123
+Casablanca,Morocco,Middle East & Africa,2012,70,95
+Cairo,Egypt,Middle East & Africa,2012,67,103
+Dakar,Senegal,Middle East & Africa,2012,70,95
+Johannesburg,South Africa,Middle East & Africa,2012,72,90
+Lagos,Nigeria,Middle East & Africa,2012,66,105
+Bogota,Colombia,Latin America & the Caribbean,2012,89,51
+Mumbai,India,Asia & Australasia,2012,44,129
+Asuncion,Paraguay,Latin America & the Caribbean,2012,60,118
+Budapest,Hungary,Eastern Europe,2012,70,95
+Pretoria,South Africa,Middle East & Africa,2012,70,95
+Kathmandu,Nepal,Asia & Australasia,2012,50,127
+Buenos Aires,Argentina,Latin America & the Caribbean,2012,73,86
+Bucharest,Romania,Eastern Europe,2012,54,125
+Lusaka,Zambia,Middle East & Africa,2012,73,86
+Istanbul,Turkey,Western Europe,2012,92,43
+New Delhi,India,Asia & Australasia,2012,48,128
+Caracas,Venezuela,Latin America & the Caribbean,2012,126,9
+Colombo,Sri Lanka,Asia & Australasia,2012,55,124
+Algiers,Algeria,Middle East & Africa,2012,54,125
+Almaty,Kazakhstan,Eastern Europe,2012,64,112
+Karachi,Pakistan,Asia & Australasia,2012,44,129
+Tashkent,Uzbekistan,Eastern Europe,2012,65,107
+Tehran,Iran,Middle East & Africa,2012,58,121
+Damascus,Syria,Middle East & Africa,2012,62,115
+New York,US,North America,2022,100,1
+Singapore,Singapore,Asia & Australasia,2022,100,1
+Tel Aviv,Israel,Middle East & Africa,2022,99,3
+Los Angeles,US,North America,2022,98,4
+Hong Kong,Hong Kong,Asia & Australasia,2022,98,4
+Zurich,Switzerland,Western Europe,2022,94,6
+Geneva,Switzerland,Western Europe,2022,91,7
+San Francisco,US,North America,2022,85,8
+Paris,France,Western Europe,2022,84,9
+Sydney,Australia,Asia & Australasia,2022,83,10
+Copenhagen,Denmark,Western Europe,2022,83,10
+Houston,US,North America,2022,82,12
+Minneapolis,US,North America,2022,82,12
+Oslo,Norway,Western Europe,2022,82,12
+Melbourne,Australia,Asia & Australasia,2022,81,15
+Seattle,US,North America,2022,80,16
+San Diego,US,North America,2022,79,17
+Amman,Jordan,Middle East & Africa,2022,79,17
+Shanghai,China,Asia & Australasia,2022,79,17
+Seoul,South Korea,Asia & Australasia,2022,79,17
+Boston,US,North America,2022,78,21
+Washington DC,US,North America,2022,78,21
+Shenzhen,China,Asia & Australasia,2022,78,21
+Pittsburgh,US,North America,2022,77,24
+Vancouver,Canada,North America,2022,77,24
+Vienna,Austria,Western Europe,2022,77,24
+Chicago,US,North America,2022,76,27
+Dublin,Ireland,Western Europe,2022,75,28
+Frankfurt,Germany,Western Europe,2022,75,28
+London,UK ,Western Europe,2022,75,28
+Helsinki,Finland,Western Europe,2022,75,28
+Brisbane,Australia,Asia & Australasia,2022,74,32
+Milan,Italy,Western Europe,2022,74,32
+Dalian,China,Asia & Australasia,2022,73,34
+Beijing,China,Asia & Australasia,2022,73,34
+Reykjavik,Iceland,Western Europe,2022,73,34
+Moscow,Russia,Eastern Europe,2022,72,37
+Honolulu,US,North America,2022,72,37
+Adelaide,Australia,Asia & Australasia,2022,72,37
+Auckland,New Zealand,Asia & Australasia,2022,72,37
+Wellington,New Zealand,Asia & Australasia,2022,72,37
+Tokyo,Japan,Asia & Australasia,2022,72,37
+Mexico City,Mexico,Latin America & the Caribbean,2022,71,43
+Munich,Germany,Western Europe,2022,71,43
+Osaka,Japan,Asia & Australasia,2022,71,43
+Atlanta,US,North America,2022,70,46
+Portland,US,North America,2022,70,46
+Saipan,Northern Mariana Islands,North America,2022,70,46
+Nanjing,China,Asia & Australasia,2022,70,46
+Wuxi,China,Asia & Australasia,2022,70,46
+Hamburg,Germany,Western Europe,2022,70,46
+Edinburgh,UK,Western Europe,2022,70,46
+Charlotte,US,North America,2022,69,53
+Indianapolis,US,North America,2022,69,53
+Lexington,US,North America,2022,69,53
+Miami,US,North America,2022,69,53
+Cleveland,US,North America,2022,69,53
+Fort Lee,US,North America,2022,69,53
+Abu Dhabi,UAE,Middle East & Africa,2022,69,53
+Dusseldorf,Germany,Western Europe,2022,69,53
+Amsterdam,Netherlands,Western Europe,2022,69,53
+Madrid,Spain,Western Europe,2022,69,53
+Barcelona,Spain,Western Europe,2022,69,53
+Montreal,Canada,North America,2022,68,64
+Shenyang,China,Asia & Australasia,2022,68,64
+Hangzhou,China,Asia & Australasia,2022,68,64
+Taipei,Taiwan,Asia & Australasia,2022,68,64
+Stuttgart,Germany,Western Europe,2022,68,64
+Brussels,Belgium,Western Europe,2022,68,64
+Nouméa,New Caledonia,Asia & Australasia,2022,68,64
+Tianjin,China,Asia & Australasia,2022,67,71
+Wuhan,China,Asia & Australasia,2022,67,71
+St Petersburg,Russia,Eastern Europe,2022,66,73
+Detroit,US,North America,2022,66,73
+San Juan,US,North America,2022,66,73
+Perth,Australia,Asia & Australasia,2022,66,73
+Guangzhou,China,Asia & Australasia,2022,66,73
+Nantong,China,Asia & Australasia,2022,66,73
+Suzhou,China,Asia & Australasia,2022,66,73
+Berlin,Germany,Western Europe,2022,66,73
+Rome,Italy,Western Europe,2022,66,73
+Manchester,UK,Western Europe,2022,66,73
+Harare,Zimbabwe,Middle East & Africa,2022,65,83
+Phnom Penh,Cambodia,Asia & Australasia,2022,65,83
+Calgary,Canada,North America,2022,65,83
+Hanoi,Vietnam,Asia & Australasia,2022,65,83
+Guatemala City,Guatemala,Latin America & the Caribbean,2022,64,87
+Zhuhai,China,Asia & Australasia,2022,64,87
+Bangkok,Thailand,Asia & Australasia,2022,64,87
+Dubai,UAE,Middle East & Africa,2022,63,90
+Qingdao,China,Asia & Australasia,2022,63,90
+Fuzhou,China,Asia & Australasia,2022,63,90
+Kaohsiung,Taiwan,Asia & Australasia,2022,63,90
+Taichung,Taiwan,Asia & Australasia,2022,63,90
+Lyon,France,Western Europe,2022,63,90
+Lima,Peru,Latin America & the Caribbean,2022,62,96
+Montevideo,Uruguay,Latin America & the Caribbean,2022,62,96
+Port Moresby,Papua New Guinea,Asia & Australasia,2022,62,96
+Santiago de Querétaro,Mexico,Latin America & the Caribbean,2022,61,99
+Ho Chi Minh City,Vietnam,Asia & Australasia,2022,61,99
+Xian,China,Asia & Australasia,2022,61,99
+Dhaka,Bangladesh,Asia & Australasia,2022,61,99
+Stockholm,Sweden,Western Europe,2022,61,99
+Toronto,Canada,North America,2022,60,104
+Luxembourg,Luxembourg,Western Europe,2022,60,104
+Rotterdam,Netherlands,Western Europe,2022,59,106
+Busan,South Korea,Asia & Australasia,2022,59,106
+San José,Costa Rica,Latin America & the Caribbean,2022,58,108
+Bahrain,Bahrain,Middle East & Africa,2022,58,108
+Quito,Ecuador,Latin America & the Caribbean,2022,58,108
+Dongguan,China,Asia & Australasia,2022,58,108
+Nairobi,Kenya,Middle East & Africa,2022,58,108
+Baku,Azerbaijan,Western Europe,2022,57,113
+Prague,Czech Rep,Eastern Europe,2022,57,113
+Doha,Qatar,Middle East & Africa,2022,56,115
+Jakarta,Indonesia,Asia & Australasia,2022,56,115
+Santiago,Chile,Latin America & the Caribbean,2022,56,115
+Bratislava,Slovakia,Eastern Europe,2022,56,115
+Jeddah,Saudi Arabia,Middle East & Africa,2022,55,119
+Athens,Greece,Western Europe,2022,55,119
+Aguascalientes,Mexico,Latin America & the Caribbean,2022,54,121
+Chongqing,China,Asia & Australasia,2022,54,121
+Lisbon,Portugal,Western Europe,2022,54,121
+Riyadh,Saudi Arabia,Middle East & Africa,2022,53,124
+Bandar Seri Begawan,Brunei,Asia & Australasia,2022,53,124
+Kuala Lumpur,Malaysia,Asia & Australasia,2022,53,124
+Manila,Philippines,Asia & Australasia,2022,53,124
+Al Khobar,Saudi Arabia,Middle East & Africa,2022,52,128
+Muscat,Oman,Middle East & Africa,2022,52,128
+Kuwait City,Kuwait,Middle East & Africa,2022,52,128
+Douala,Cameroon,Middle East & Africa,2022,52,128
+Sofia,Bulgaria,Eastern Europe,2022,50,132
+Chiang Mai,Thailand,Asia & Australasia,2022,50,132
+Abidjan,Côte d'Ivoire,Middle East & Africa,2022,50,132
+Belgrade,Serbia,Eastern Europe,2022,50,132
+Warsaw,Poland,Eastern Europe,2022,50,132
+São Paulo,Brazil,Latin America & the Caribbean,2022,49,137
+Rio de Janeiro,Brazil,Latin America & the Caribbean,2022,49,137
+Panama City,Panama,Latin America & the Caribbean,2022,48,139
+Lagos,Nigeria,Middle East & Africa,2022,47,140
+Johannesburg,South Africa,Middle East & Africa,2022,47,140
+Dakar,Senegal,Middle East & Africa,2022,47,140
+Casablanca,Morocco,Middle East & Africa,2022,47,140
+Cairo,Egypt,Middle East & Africa,2022,47,140
+Asunción,Paraguay,Latin America & the Caribbean,2022,45,145
+Monterrey,Mexico,Latin America & the Caribbean,2022,45,145
+Surabaya,Indonesia,Asia & Australasia,2022,45,145
+Mumbai,India,Asia & Australasia,2022,45,145
+Penang,Malaysia,Asia & Australasia,2022,45,145
+Bogotá,Colombia,Latin America & the Caribbean,2022,45,145
+Kathmandu,Nepal,Asia & Australasia,2022,44,151
+Pretoria,South Africa,Middle East & Africa,2022,44,151
+Budapest,Hungary,Eastern Europe,2022,44,151
+Buenos Aires,Argentina,Latin America & the Caribbean,2022,43,154
+Manaus,Brazil,Latin America & the Caribbean,2022,42,155
+Bucharest,Romania,Eastern Europe,2022,42,155
+Lusaka,Zambia,Middle East & Africa,2022,41,157
+Caracas,Venezuela,Latin America & the Caribbean,2022,40,158
+New Delhi,India,Asia & Australasia,2022,40,158
+Istanbul,Turkey,Western Europe,2022,40,158
+Algiers,Algeria,Middle East & Africa,2022,38,161
+Bangalore,India,Asia & Australasia,2022,38,161
+Colombo,Sri Lanka,Asia & Australasia,2022,38,161
+Chennai,India,Asia & Australasia,2022,37,164
+Ahmedabad,India,Asia & Australasia,2022,35,165
+Almaty,Kazakhstan,Eastern Europe,2022,34,166
+Karachi,Pakistan,Asia & Australasia,2022,32,167
+Tashkent,Uzbekistan,Eastern Europe,2022,31,168
+Tunis,Tunisia,Middle East & Africa,2022,30,169
+Tehran,Iran,Middle East & Africa,2022,23,170
+Tripoli,Libya,Middle East & Africa,2022,22,171
+Damascus,Syria,Middle East & Africa,2022,11,172
+New York,US,North America,2021,100,5
+Singapore,Singapore,Asia & Australasia,2021,104,2
+Tel Aviv,Israel,Middle East & Africa,2021,106,1
+Los Angeles,US,North America,2021,96,9
+Hong Kong,Hong Kong,Asia & Australasia,2021,101,4
+Zurich,Switzerland,Western Europe,2021,103,3
+Geneva,Switzerland,Western Europe,2021,99,7
+San Francisco,US,North America,2021,84,24
+Paris,France,Western Europe,2021,100,5
+Sydney,Australia,Asia & Australasia,2021,90,14
+Copenhagen,Denmark,Western Europe,2021,97,8
+Houston,US,North America,2021,81,30
+Minneapolis,US,North America,2021,82,27
+Oslo,Norway,Western Europe,2021,93,11
+Melbourne,Australia,Asia & Australasia,2021,88,16
+Seattle,US,North America,2021,78,41
+San Diego,US,North America,2021,77,50
+Amman,Jordan,Middle East & Africa,2021,80,33
+Shanghai,China,Asia & Australasia,2021,86,19
+Seoul,South Korea,Asia & Australasia,2021,92,12
+Boston,US,North America,2021,77,50
+Washington DC,US,North America,2021,78,41
+Shenzhen,China,Asia & Australasia,2021,85,22
+Pittsburgh,US,North America,2021,76,53
+Vancouver,Canada,North America,2021,78,41
+Vienna,Austria,Western Europe,2021,90,14
+Chicago,US,North America,2021,75,56
+Dublin,Ireland,Western Europe,2021,86,19
+Frankfurt,Germany,Western Europe,2021,86,19
+London,UK ,Western Europe,2021,87,17
+Helsinki,Finland,Western Europe,2021,87,17
+Brisbane,Australia,Asia & Australasia,2021,79,36
+Milan,Italy,Western Europe,2021,85,22
+Dalian,China,Asia & Australasia,2021,78,41
+Beijing,China,Asia & Australasia,2021,79,36
+Reykjavik,Iceland,Western Europe,2021,79,36
+Moscow,Russia,Eastern Europe,2021,56,125
+Honolulu,US,North America,2021,71,66
+Adelaide,Australia,Asia & Australasia,2021,78,41
+Auckland,New Zealand,Asia & Australasia,2021,82,27
+Wellington,New Zealand,Asia & Australasia,2021,83,25
+Tokyo,Japan,Asia & Australasia,2021,91,13
+Mexico City,Mexico,Latin America & the Caribbean,2021,69,76
+Munich,Germany,Western Europe,2021,83,25
+Osaka,Japan,Asia & Australasia,2021,94,10
+Atlanta,US,North America,2021,67,88
+Portland,US,North America,2021,69,76
+Saipan,Northern Mariana Islands,North America,2021,69,76
+Nanjing,China,Asia & Australasia,2021,75,56
+Wuxi,China,Asia & Australasia,2021,75,56
+Hamburg,Germany,Western Europe,2021,81,30
+Edinburgh,UK,Western Europe,2021,82,27
+Charlotte,US,North America,2021,66,92
+Indianapolis,US,North America,2021,67,88
+Lexington,US,North America,2021,68,81
+Miami,US,North America,2021,68,81
+Cleveland,US,North America,2021,68,81
+Fort Lee,US,North America,2021,68,81
+Abu Dhabi,UAE,Middle East & Africa,2021,71,66
+Dusseldorf,Germany,Western Europe,2021,78,41
+Amsterdam,Netherlands,Western Europe,2021,78,41
+Madrid,Spain,Western Europe,2021,79,36
+Barcelona,Spain,Western Europe,2021,80,33
+Montreal,Canada,North America,2021,70,71
+Shenyang,China,Asia & Australasia,2021,73,61
+Hangzhou,China,Asia & Australasia,2021,74,60
+Taipei,Taiwan,Asia & Australasia,2021,76,53
+Stuttgart,Germany,Western Europe,2021,78,41
+Brussels,Belgium,Western Europe,2021,79,36
+Nouméa,New Caledonia,Asia & Australasia,2021,80,33
+Tianjin,China,Asia & Australasia,2021,73,61
+Wuhan,China,Asia & Australasia,2021,73,61
+St Petersburg,Russia,Eastern Europe,2021,50,143
+Detroit,US,North America,2021,64,97
+San Juan,US,North America,2021,66,92
+Perth,Australia,Asia & Australasia,2021,70,71
+Guangzhou,China,Asia & Australasia,2021,70,71
+Nantong,China,Asia & Australasia,2021,70,71
+Suzhou,China,Asia & Australasia,2021,71,66
+Berlin,Germany,Western Europe,2021,76,53
+Rome,Italy,Western Europe,2021,77,50
+Manchester,UK,Western Europe,2021,78,41
+Harare,Zimbabwe,Middle East & Africa,2021,64,97
+Phnom Penh,Cambodia,Asia & Australasia,2021,66,92
+Calgary,Canada,North America,2021,67,88
+Hanoi,Vietnam,Asia & Australasia,2021,69,76
+Guatemala City,Guatemala,Latin America & the Caribbean,2021,63,101
+Zhuhai,China,Asia & Australasia,2021,69,76
+Bangkok,Thailand,Asia & Australasia,2021,72,65
+Dubai,UAE,Middle East & Africa,2021,64,97
+Qingdao,China,Asia & Australasia,2021,68,81
+Fuzhou,China,Asia & Australasia,2021,68,81
+Kaohsiung,Taiwan,Asia & Australasia,2021,70,71
+Taichung,Taiwan,Asia & Australasia,2021,71,66
+Lyon,France,Western Europe,2021,75,56
+Lima,Peru,Latin America & the Caribbean,2021,58,118
+Montevideo,Uruguay,Latin America & the Caribbean,2021,59,114
+Port Moresby,Papua New Guinea,Asia & Australasia,2021,61,109
+Santiago de Querétaro,Mexico,Latin America & the Caribbean,2021,60,112
+Ho Chi Minh City,Vietnam,Asia & Australasia,2021,64,97
+Xian,China,Asia & Australasia,2021,65,96
+Dhaka,Bangladesh,Asia & Australasia,2021,66,92
+Stockholm,Sweden,Western Europe,2021,73,61
+Toronto,Canada,North America,2021,62,105
+Luxembourg,Luxembourg,Western Europe,2021,71,66
+Rotterdam,Netherlands,Western Europe,2021,67,88
+Busan,South Korea,Asia & Australasia,2021,68,81
+San José,Costa Rica,Latin America & the Caribbean,2021,57,120
+Bahrain,Bahrain,Middle East & Africa,2021,59,114
+Quito,Ecuador,Latin America & the Caribbean,2021,59,114
+Dongguan,China,Asia & Australasia,2021,62,105
+Nairobi,Kenya,Middle East & Africa,2021,63,101
+Baku,Azerbaijan,Western Europe,2021,54,134
+Prague,Czech Rep,Eastern Europe,2021,62,105
+Doha,Qatar,Middle East & Africa,2021,56,125
+Jakarta,Indonesia,Asia & Australasia,2021,58,118
+Santiago,Chile,Latin America & the Caribbean,2021,61,109
+Bratislava,Slovakia,Eastern Europe,2021,63,101
+Jeddah,Saudi Arabia,Middle East & Africa,2021,56,125
+Athens,Greece,Western Europe,2021,61,109
+Aguascalientes,Mexico,Latin America & the Caribbean,2021,53,140
+Chongqing,China,Asia & Australasia,2021,59,114
+Lisbon,Portugal,Western Europe,2021,62,105
+Riyadh,Saudi Arabia,Middle East & Africa,2021,54,134
+Bandar Seri Begawan,Brunei,Asia & Australasia,2021,56,125
+Kuala Lumpur,Malaysia,Asia & Australasia,2021,57,120
+Manila,Philippines,Asia & Australasia,2021,60,112
+Al Khobar,Saudi Arabia,Middle East & Africa,2021,53,140
+Muscat,Oman,Middle East & Africa,2021,54,134
+Kuwait City,Kuwait,Middle East & Africa,2021,55,129
+Douala,Cameroon,Middle East & Africa,2021,63,101
+Sofia,Bulgaria,Eastern Europe,2021,55,129
+Chiang Mai,Thailand,Asia & Australasia,2021,55,129
+Abidjan,Côte d'Ivoire,Middle East & Africa,2021,57,120
+Belgrade,Serbia,Eastern Europe,2021,57,120
+Warsaw,Poland,Eastern Europe,2021,57,120
+São Paulo,Brazil,Latin America & the Caribbean,2021,47,149
+Rio de Janeiro,Brazil,Latin America & the Caribbean,2021,47,149
+Panama City,Panama,Latin America & the Caribbean,2021,49,145
+Lagos,Nigeria,Middle East & Africa,2021,44,154
+Johannesburg,South Africa,Middle East & Africa,2021,54,134
+Dakar,Senegal,Middle East & Africa,2021,54,134
+Casablanca,Morocco,Middle East & Africa,2021,55,129
+Cairo,Egypt,Middle East & Africa,2021,55,129
+Asunción,Paraguay,Latin America & the Caribbean,2021,43,157
+Monterrey,Mexico,Latin America & the Caribbean,2021,44,154
+Surabaya,Indonesia,Asia & Australasia,2021,47,149
+Mumbai,India,Asia & Australasia,2021,48,148
+Penang,Malaysia,Asia & Australasia,2021,49,145
+Bogotá,Colombia,Latin America & the Caribbean,2021,50,143
+Kathmandu,Nepal,Asia & Australasia,2021,47,149
+Pretoria,South Africa,Middle East & Africa,2021,52,142
+Budapest,Hungary,Eastern Europe,2021,54,134
+Buenos Aires,Argentina,Latin America & the Caribbean,2021,39,163
+Manaus,Brazil,Latin America & the Caribbean,2021,41,159
+Bucharest,Romania,Eastern Europe,2021,45,153
+Lusaka,Zambia,Middle East & Africa,2021,39,163
+Caracas,Venezuela,Latin America & the Caribbean,2021,40,161
+New Delhi,India,Asia & Australasia,2021,43,157
+Istanbul,Turkey,Western Europe,2021,49,145
+Algiers,Algeria,Middle East & Africa,2021,38,165
+Bangalore,India,Asia & Australasia,2021,41,159
+Colombo,Sri Lanka,Asia & Australasia,2021,44,154
+Chennai,India,Asia & Australasia,2021,40,161
+Ahmedabad,India,Asia & Australasia,2021,37,166
+Almaty,Kazakhstan,Eastern Europe,2021,35,168
+Karachi,Pakistan,Asia & Australasia,2021,36,167
+Tashkent,Uzbekistan,Eastern Europe,2021,30,170
+Tunis,Tunisia,Middle East & Africa,2021,33,169
+Tehran,Iran,Middle East & Africa,2021,81,30
+Tripoli,Libya,Middle East & Africa,2021,23,171
+Damascus,Syria,Middle East & Africa,2021,12,172
