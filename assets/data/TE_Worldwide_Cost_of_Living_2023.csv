@@ -1,0 +1,1449 @@
+city,eiu_region,year,value
+Zurich,Western Europe,2023,104
+Singapore,Asia & Australasia,2023,104
+Geneva,Western Europe,2023,100
+New York,North America,2023,100
+Hong Kong,Asia & Australasia,2023,98
+Los Angeles,North America,2023,97
+Paris,Western Europe,2023,91
+Tel Aviv,Middle East & Africa,2023,89
+Copenhagen,Western Europe,2023,89
+San Francisco,North America,2023,86
+Vienna,Western Europe,2023,85
+London,Western Europe,2023,83
+Frankfurt,Western Europe,2023,82
+Dublin,Western Europe,2023,82
+Seoul,Asia & Australasia,2023,82
+Mexico city,Latin America & the Caribbean,2023,81
+Helsinki,Western Europe,2023,81
+Reykjavik,Western Europe,2023,81
+Houston,North America,2023,81
+Seattle,North America,2023,81
+Sydney,Asia & Australasia,2023,81
+Minneapolis,North America,2023,80
+San Diego,North America,2023,80
+Milan,Western Europe,2023,80
+"Washington, DC",North America,2023,79
+Amman,Middle East & Africa,2023,78
+Munich,Western Europe,2023,78
+Boston,North America,2023,78
+Melbourne,Asia & Australasia,2023,78
+Pittsburgh,North America,2023,77
+Oslo,Western Europe,2023,77
+Hamburg,Western Europe,2023,77
+Chicago,North America,2023,76
+Vancouver,North America,2023,76
+Edinburgh,Western Europe,2023,76
+Barcelona,Western Europe,2023,75
+Madrid,Western Europe,2023,75
+Amsterdam,Western Europe,2023,75
+Stuttgart,Western Europe,2023,75
+Shanghai,Asia & Australasia,2023,75
+Düsseldorf,Western Europe,2023,74
+Nouméa,Asia & Australasia,2023,73
+Brussels,Western Europe,2023,73
+Manchester,Western Europe,2023,73
+Berlin,Western Europe,2023,73
+Shenzhen,Asia & Australasia,2023,73
+Honolulu,North America,2023,72
+Wellington,Asia & Australasia,2023,72
+Auckland,Asia & Australasia,2023,72
+Rome,Western Europe,2023,72
+Santiago de Querétaro,Latin America & the Caribbean,2023,71
+Miami,North America,2023,71
+Saipan,North America,2023,71
+Adelaide,Asia & Australasia,2023,71
+Brisbane,Asia & Australasia,2023,71
+Portland,North America,2023,70
+Atlanta,North America,2023,70
+Abu Dhabi,Middle East & Africa,2023,70
+Charlotte,North America,2023,70
+Lexington,North America,2023,69
+Cleveland,North America,2023,69
+Fort Lee,North America,2023,69
+Indianapolis,North America,2023,69
+Detroit,North America,2023,69
+Lyon,Western Europe,2023,69
+Tokyo,Asia & Australasia,2023,69
+Beijing,Asia & Australasia,2023,69
+Dalian,Asia & Australasia,2023,69
+Montevideo,Latin America & the Caribbean,2023,68
+Bangkok,Asia & Australasia,2023,67
+San José,Latin America & the Caribbean,2023,67
+Osaka,Asia & Australasia,2023,67
+San Juan,North America,2023,66
+Lima,Latin America & the Caribbean,2023,66
+Taipei,Asia & Australasia,2023,66
+Luxembourg,Western Europe,2023,66
+Perth,Asia & Australasia,2023,65
+Harare,Middle East & Africa,2023,65
+Rotterdam,Western Europe,2023,65
+Nanjing,Asia & Australasia,2023,65
+Wuxi,Asia & Australasia,2023,65
+Prague,Eastern Europe,2023,64
+Hanoi,Asia & Australasia,2023,64
+Phnom Penh,Asia & Australasia,2023,64
+Aguascalientes,Latin America & the Caribbean,2023,64
+Dubai,Middle East & Africa,2023,64
+Montreal,North America,2023,64
+Tianjin,Asia & Australasia,2023,64
+Wuhan,Asia & Australasia,2023,64
+Hangzhou,Asia & Australasia,2023,64
+Shenyang,Asia & Australasia,2023,64
+Bratislava,Eastern Europe,2023,63
+Guatemala city,Latin America & the Caribbean,2023,63
+Calgary,North America,2023,63
+Suzhou,Asia & Australasia,2023,63
+Busan,Asia & Australasia,2023,62
+Stockholm,Western Europe,2023,62
+Guangzhou,Asia & Australasia,2023,62
+Nantong,Asia & Australasia,2023,62
+Port Moresby,Asia & Australasia,2023,61
+Taichung,Asia & Australasia,2023,61
+Kaohsiung,Asia & Australasia,2023,61
+Toronto,North America,2023,61
+Zhuhai,Asia & Australasia,2023,61
+Ho Chi Minh city,Asia & Australasia,2023,60
+Fuzhou,Asia & Australasia,2023,60
+Athens,Western Europe,2023,60
+Santiago,Latin America & the Caribbean,2023,59
+Baku,Eastern Europe,2023,59
+Qingdao,Asia & Australasia,2023,59
+Lisbon,Western Europe,2023,59
+Belgrade,Eastern Europe,2023,58
+Warsaw,Eastern Europe,2023,58
+Xian,Asia & Australasia,2023,58
+Douala,Middle East & Africa,2023,58
+Quito,Latin America & the Caribbean,2023,58
+Bahrain,Middle East & Africa,2023,57
+Sofia,Eastern Europe,2023,56
+Dongguan,Asia & Australasia,2023,56
+Jeddah,Middle East & Africa,2023,56
+Doha,Middle East & Africa,2023,56
+Dhaka,Asia & Australasia,2023,56
+Manila,Asia & Australasia,2023,55
+Jakarta,Asia & Australasia,2023,55
+Bandar Seri Begawan,Asia & Australasia,2023,54
+Monterrey,Latin America & the Caribbean,2023,54
+Abidjan,Middle East & Africa,2023,54
+Riyadh,Middle East & Africa,2023,54
+Budapest,Eastern Europe,2023,53
+Kuwait city,Middle East & Africa,2023,53
+Al Khobar,Middle East & Africa,2023,53
+Kyiv,Eastern Europe,2023,52
+Bogotá,Latin America & the Caribbean,2023,52
+São Paulo,Latin America & the Caribbean,2023,52
+Rio de Janeiro,Latin America & the Caribbean,2023,52
+Muscat,Middle East & Africa,2023,52
+Chiang Mai,Asia & Australasia,2023,51
+Kuala Lumpur,Asia & Australasia,2023,51
+Chongqing,Asia & Australasia,2023,51
+Dakar,Middle East & Africa,2023,51
+Nairobi,Middle East & Africa,2023,50
+Casablanca,Middle East & Africa,2023,49
+Moscow,Eastern Europe,2023,49
+Caracas,Latin America & the Caribbean,2023,48
+Panama city,Latin America & the Caribbean,2023,48
+Bucharest,Eastern Europe,2023,46
+Surabaya,Asia & Australasia,2023,45
+Manaus,Latin America & the Caribbean,2023,45
+St Petersburg,Eastern Europe,2023,45
+Kathmandu,Asia & Australasia,2023,44
+Penang,Asia & Australasia,2023,44
+Mumbai,Asia & Australasia,2023,44
+Johannesburg,Middle East & Africa,2023,44
+Istanbul,Eastern Europe,2023,44
+Colombo,Asia & Australasia,2023,42
+Pretoria,Middle East & Africa,2023,42
+Asunción,Latin America & the Caribbean,2023,42
+Algiers,Middle East & Africa,2023,41
+New Delhi,Asia & Australasia,2023,39
+Cairo,Middle East & Africa,2023,39
+Bangalore,Asia & Australasia,2023,38
+Almaty,Eastern Europe,2023,38
+Chennai,Asia & Australasia,2023,37
+Buenos Aires,Latin America & the Caribbean,2023,37
+Lagos,Middle East & Africa,2023,35
+Ahmedabad,Asia & Australasia,2023,34
+Lusaka,Middle East & Africa,2023,33
+Tunis,Middle East & Africa,2023,32
+Tashkent,Eastern Europe,2023,31
+Karachi,Asia & Australasia,2023,28
+Tripoli,Middle East & Africa,2023,23
+Tehran,Middle East & Africa,2023,20
+Damascus,Middle East & Africa,2023,13
+Zurich,Western Europe,2022,94
+Singapore,Asia & Australasia,2022,100
+Geneva,Western Europe,2022,91
+New York,North America,2022,100
+Hong Kong,Asia & Australasia,2022,98
+Los Angeles,North America,2022,98
+Paris,Western Europe,2022,84
+Tel Aviv,Middle East & Africa,2022,99
+Copenhagen,Western Europe,2022,83
+San Francisco,North America,2022,85
+Vienna,Western Europe,2022,77
+London,Western Europe,2022,75
+Frankfurt,Western Europe,2022,75
+Dublin,Western Europe,2022,75
+Seoul,Asia & Australasia,2022,79
+Mexico city,Latin America & the Caribbean,2022,71
+Helsinki,Western Europe,2022,75
+Reykjavik,Western Europe,2022,73
+Houston,North America,2022,82
+Seattle,North America,2022,80
+Sydney,Asia & Australasia,2022,83
+Minneapolis,North America,2022,82
+San Diego,North America,2022,79
+Milan,Western Europe,2022,74
+"Washington, DC",North America,2022,78
+Amman,Middle East & Africa,2022,79
+Munich,Western Europe,2022,71
+Boston,North America,2022,78
+Melbourne,Asia & Australasia,2022,81
+Pittsburgh,North America,2022,77
+Oslo,Western Europe,2022,82
+Hamburg,Western Europe,2022,70
+Chicago,North America,2022,76
+Vancouver,North America,2022,77
+Edinburgh,Western Europe,2022,70
+Barcelona,Western Europe,2022,69
+Madrid,Western Europe,2022,69
+Amsterdam,Western Europe,2022,69
+Stuttgart,Western Europe,2022,68
+Shanghai,Asia & Australasia,2022,79
+Düsseldorf,Western Europe,2022,69
+Nouméa,Asia & Australasia,2022,68
+Brussels,Western Europe,2022,68
+Manchester,Western Europe,2022,66
+Berlin,Western Europe,2022,66
+Shenzhen,Asia & Australasia,2022,78
+Honolulu,North America,2022,72
+Wellington,Asia & Australasia,2022,72
+Auckland,Asia & Australasia,2022,72
+Rome,Western Europe,2022,66
+Santiago de Querétaro,Latin America & the Caribbean,2022,61
+Miami,North America,2022,69
+Saipan,North America,2022,70
+Adelaide,Asia & Australasia,2022,72
+Brisbane,Asia & Australasia,2022,74
+Portland,North America,2022,70
+Atlanta,North America,2022,70
+Abu Dhabi,Middle East & Africa,2022,69
+Charlotte,North America,2022,69
+Lexington,North America,2022,69
+Cleveland,North America,2022,69
+Fort Lee,North America,2022,69
+Indianapolis,North America,2022,69
+Detroit,North America,2022,66
+Lyon,Western Europe,2022,63
+Tokyo,Asia & Australasia,2022,72
+Beijing,Asia & Australasia,2022,73
+Dalian,Asia & Australasia,2022,73
+Montevideo,Latin America & the Caribbean,2022,62
+Bangkok,Asia & Australasia,2022,64
+San José,Latin America & the Caribbean,2022,58
+Osaka,Asia & Australasia,2022,71
+San Juan,North America,2022,66
+Lima,Latin America & the Caribbean,2022,62
+Taipei,Asia & Australasia,2022,68
+Luxembourg,Western Europe,2022,60
+Perth,Asia & Australasia,2022,66
+Harare,Middle East & Africa,2022,65
+Rotterdam,Western Europe,2022,59
+Nanjing,Asia & Australasia,2022,70
+Wuxi,Asia & Australasia,2022,70
+Prague,Eastern Europe,2022,57
+Hanoi,Asia & Australasia,2022,65
+Phnom Penh,Asia & Australasia,2022,65
+Aguascalientes,Latin America & the Caribbean,2022,54
+Dubai,Middle East & Africa,2022,63
+Montreal,North America,2022,68
+Tianjin,Asia & Australasia,2022,67
+Wuhan,Asia & Australasia,2022,67
+Hangzhou,Asia & Australasia,2022,68
+Shenyang,Asia & Australasia,2022,68
+Bratislava,Eastern Europe,2022,56
+Guatemala city,Latin America & the Caribbean,2022,64
+Calgary,North America,2022,65
+Suzhou,Asia & Australasia,2022,66
+Busan,Asia & Australasia,2022,59
+Stockholm,Western Europe,2022,61
+Guangzhou,Asia & Australasia,2022,66
+Nantong,Asia & Australasia,2022,66
+Port Moresby,Asia & Australasia,2022,62
+Taichung,Asia & Australasia,2022,63
+Kaohsiung,Asia & Australasia,2022,63
+Toronto,North America,2022,60
+Zhuhai,Asia & Australasia,2022,64
+Ho Chi Minh city,Asia & Australasia,2022,61
+Fuzhou,Asia & Australasia,2022,63
+Athens,Western Europe,2022,55
+Santiago,Latin America & the Caribbean,2022,56
+Baku,Eastern Europe,2022,57
+Qingdao,Asia & Australasia,2022,63
+Lisbon,Western Europe,2022,54
+Belgrade,Eastern Europe,2022,50
+Warsaw,Eastern Europe,2022,50
+Xian,Asia & Australasia,2022,61
+Douala,Middle East & Africa,2022,52
+Quito,Latin America & the Caribbean,2022,58
+Bahrain,Middle East & Africa,2022,58
+Sofia,Eastern Europe,2022,50
+Dongguan,Asia & Australasia,2022,58
+Jeddah,Middle East & Africa,2022,55
+Doha,Middle East & Africa,2022,56
+Dhaka,Asia & Australasia,2022,61
+Manila,Asia & Australasia,2022,53
+Jakarta,Asia & Australasia,2022,56
+Bandar Seri Begawan,Asia & Australasia,2022,53
+Monterrey,Latin America & the Caribbean,2022,45
+Abidjan,Middle East & Africa,2022,50
+Riyadh,Middle East & Africa,2022,53
+Budapest,Eastern Europe,2022,44
+Kuwait city,Middle East & Africa,2022,52
+Al Khobar,Middle East & Africa,2022,52
+Bogotá,Latin America & the Caribbean,2022,45
+São Paulo,Latin America & the Caribbean,2022,49
+Rio de Janeiro,Latin America & the Caribbean,2022,49
+Muscat,Middle East & Africa,2022,52
+Chiang Mai,Asia & Australasia,2022,50
+Kuala Lumpur,Asia & Australasia,2022,53
+Chóngqìng,Asia & Australasia,2022,54
+Dakar,Middle East & Africa,2022,47
+Nairobi,Middle East & Africa,2022,58
+Casablanca,Middle East & Africa,2022,47
+Moscow,Eastern Europe,2022,72
+Caracas,Latin America & the Caribbean,2022,40
+Panama city,Latin America & the Caribbean,2022,48
+Bucharest,Eastern Europe,2022,42
+Surabaya,Asia & Australasia,2022,45
+Manaus,Latin America & the Caribbean,2022,42
+St Petersburg,Eastern Europe,2022,66
+Kathmandu,Asia & Australasia,2022,44
+Penang,Asia & Australasia,2022,45
+Mumbai,Asia & Australasia,2022,45
+Johannesburg,Middle East & Africa,2022,47
+Istanbul,Eastern Europe,2022,40
+Colombo,Asia & Australasia,2022,38
+Pretoria,Middle East & Africa,2022,44
+Asunción,Latin America & the Caribbean,2022,45
+Algiers,Middle East & Africa,2022,38
+New Delhi,Asia & Australasia,2022,40
+Cairo,Middle East & Africa,2022,47
+Bangalore,Asia & Australasia,2022,38
+Almaty,Eastern Europe,2022,34
+Chennai,Asia & Australasia,2022,37
+Buenos Aires,Latin America & the Caribbean,2022,43
+Lagos,Middle East & Africa,2022,47
+Ahmedabad,Asia & Australasia,2022,35
+Lusaka,Middle East & Africa,2022,41
+Tunis,Middle East & Africa,2022,30
+Tashkent,Eastern Europe,2022,31
+Karachi,Asia & Australasia,2022,32
+Tripoli,Middle East & Africa,2022,22
+Tehran,Middle East & Africa,2022,23
+Damascus,Middle East & Africa,2022,11
+Tel Aviv,Middle East & Africa,2021,106
+Paris,Western Europe,2021,104
+Singapore,Asia & Australasia,2021,104
+Zurich,Western Europe,2021,103
+Hong Kong,Asia & Australasia,2021,101
+New York,North America,2021,100
+Geneva,Western Europe,2021,99
+Copenhagen,Western Europe,2021,97
+Los Angeles,North America,2021,96
+Osaka,Asia & Australasia,2021,94
+Oslo,Western Europe,2021,93
+Seoul,Asia & Australasia,2021,92
+Tokyo,Asia & Australasia,2021,91
+Vienna,Western Europe,2021,90
+Sydney,Asia & Australasia,2021,90
+Melbourne,Asia & Australasia,2021,88
+Helsinki,Western Europe,2021,87
+London,Western Europe,2021,87
+Dublin,Western Europe,2021,86
+Frankfurt,Western Europe,2021,86
+Shanghai,Asia & Australasia,2021,86
+Milan,Western Europe,2021,85
+Shenzhen,Asia & Australasia,2021,85
+San Francisco,North America,2021,84
+Munich,Western Europe,2021,83
+Wellington,Asia & Australasia,2021,83
+Minneapolis,North America,2021,82
+Auckland,Asia & Australasia,2021,82
+Edinburgh,Western Europe,2021,82
+Houston,North America,2021,81
+Hamburg,Western Europe,2021,81
+Tehran,Middle East & Africa,2021,81
+Amman,Middle East & Africa,2021,80
+Barcelona,Western Europe,2021,80
+Nouméa,Asia & Australasia,2021,80
+Madrid,Western Europe,2021,79
+Brussels,Western Europe,2021,79
+Brisbane,Asia & Australasia,2021,79
+Beijing,Asia & Australasia,2021,79
+Reykjavik,Western Europe,2021,79
+Amsterdam,Western Europe,2021,78
+Düsseldorf,Western Europe,2021,78
+"Washington, DC",North America,2021,78
+Seattle,North America,2021,78
+Manchester,Western Europe,2021,78
+Vancouver,North America,2021,78
+Dalian,Asia & Australasia,2021,78
+Adelaide,Asia & Australasia,2021,78
+Stuttgart,Western Europe,2021,78
+Rome,Western Europe,2021,77
+Boston,North America,2021,77
+San Diego,North America,2021,77
+Pittsburgh,North America,2021,76
+Berlin,Western Europe,2021,76
+Taipei,Asia & Australasia,2021,76
+Chicago,North America,2021,75
+Lyon,Western Europe,2021,75
+Nanjing,Asia & Australasia,2021,75
+Wuxi,Asia & Australasia,2021,75
+Hangzhou,Asia & Australasia,2021,74
+Stockholm,Western Europe,2021,73
+Tianjin,Asia & Australasia,2021,73
+Shenyang,Asia & Australasia,2021,73
+Wuhan,Asia & Australasia,2021,73
+Bangkok,Asia & Australasia,2021,72
+Abu Dhabi,Middle East & Africa,2021,71
+Honolulu,North America,2021,71
+Luxembourg,Western Europe,2021,71
+Suzhou,Asia & Australasia,2021,71
+Taichung,Asia & Australasia,2021,71
+Montreal,North America,2021,70
+Guangzhou,Asia & Australasia,2021,70
+Perth,Asia & Australasia,2021,70
+Kaohsiung,Asia & Australasia,2021,70
+Nantong,Asia & Australasia,2021,70
+Hanoi,Asia & Australasia,2021,69
+Mexico city,Latin America & the Caribbean,2021,69
+Portland,North America,2021,69
+Saipan,North America,2021,69
+Zhuhai,Asia & Australasia,2021,69
+Lexington,North America,2021,68
+Miami,North America,2021,68
+Cleveland,North America,2021,68
+Qingdao,Asia & Australasia,2021,68
+Busan,Asia & Australasia,2021,68
+Fort Lee,North America,2021,68
+Fuzhou,Asia & Australasia,2021,68
+Atlanta,North America,2021,67
+Calgary,North America,2021,67
+Indianapolis,North America,2021,67
+Rotterdam,Western Europe,2021,67
+Dhaka,Asia & Australasia,2021,66
+Phnom Penh,Asia & Australasia,2021,66
+Charlotte,North America,2021,66
+San Juan,North America,2021,66
+Xian,Asia & Australasia,2021,65
+Dubai,Middle East & Africa,2021,64
+Ho Chi Minh city,Asia & Australasia,2021,64
+Detroit,North America,2021,64
+Harare,Middle East & Africa,2021,64
+Guatemala city,Latin America & the Caribbean,2021,63
+Nairobi,Middle East & Africa,2021,63
+Bratislava,Eastern Europe,2021,63
+Douala,Middle East & Africa,2021,63
+Lisbon,Western Europe,2021,62
+Toronto,North America,2021,62
+Prague,Eastern Europe,2021,62
+Dongguan,Asia & Australasia,2021,62
+Athens,Western Europe,2021,61
+Santiago,Latin America & the Caribbean,2021,61
+Port Moresby,Asia & Australasia,2021,61
+Manila,Asia & Australasia,2021,60
+Santiago de Querétaro,Latin America & the Caribbean,2021,60
+Quito,Latin America & the Caribbean,2021,59
+Bahrain,Middle East & Africa,2021,59
+Montevideo,Latin America & the Caribbean,2021,59
+Chongqing,Asia & Australasia,2021,59
+Lima,Latin America & the Caribbean,2021,58
+Jakarta,Asia & Australasia,2021,58
+Kyiv,Eastern Europe,2021,58
+San Jose,Latin America & the Caribbean,2021,57
+Kuala Lumpur,Asia & Australasia,2021,57
+Warsaw,Eastern Europe,2021,57
+Abidjan,Middle East & Africa,2021,57
+Belgrade,Eastern Europe,2021,57
+Doha,Middle East & Africa,2021,56
+Jeddah,Middle East & Africa,2021,56
+Bandar Seri Begawan,Asia & Australasia,2021,56
+Moscow,Eastern Europe,2021,56
+Cairo,Middle East & Africa,2021,55
+Kuwait city,Middle East & Africa,2021,55
+Sofia,Eastern Europe,2021,55
+Casablanca,Middle East & Africa,2021,55
+Chiang Mai,Asia & Australasia,2021,55
+Muscat,Middle East & Africa,2021,54
+Riyadh,Middle East & Africa,2021,54
+Dakar,Middle East & Africa,2021,54
+Budapest,Eastern Europe,2021,54
+Johannesburg,Middle East & Africa,2021,54
+Baku,Eastern Europe,2021,54
+Al Khobar,Middle East & Africa,2021,53
+Aguascalientes,Latin America & the Caribbean,2021,53
+Pretoria,Middle East & Africa,2021,52
+Bogota,Latin America & the Caribbean,2021,50
+St Petersburg,Eastern Europe,2021,50
+Panama city,Latin America & the Caribbean,2021,49
+Istanbul,Eastern Europe,2021,49
+Penang,Asia & Australasia,2021,49
+Mumbai,Asia & Australasia,2021,48
+Kathmandu,Asia & Australasia,2021,47
+Rio de Janeiro,Latin America & the Caribbean,2021,47
+Sao Paulo,Latin America & the Caribbean,2021,47
+Surabaya,Asia & Australasia,2021,47
+Bucharest,Eastern Europe,2021,45
+Colombo,Asia & Australasia,2021,44
+Lagos,Middle East & Africa,2021,44
+Monterrey,Latin America & the Caribbean,2021,44
+New Delhi,Asia & Australasia,2021,43
+Asuncion,Latin America & the Caribbean,2021,43
+Bangalore,Asia & Australasia,2021,41
+Manaus,Latin America & the Caribbean,2021,41
+Chennai,Asia & Australasia,2021,40
+Caracas,Latin America & the Caribbean,2021,40
+Buenos Aires,Latin America & the Caribbean,2021,39
+Lusaka,Middle East & Africa,2021,39
+Algiers,Middle East & Africa,2021,38
+Ahmedabad,Asia & Australasia,2021,37
+Karachi,Asia & Australasia,2021,36
+Almaty,Eastern Europe,2021,35
+Tunis,Middle East & Africa,2021,33
+Tashkent,Eastern Europe,2021,30
+Tripoli,Middle East & Africa,2021,23
+Damascus,Middle East & Africa,2021,12
+Osaka,Asia & Australasia,2020,101
+Singapore,Asia & Australasia,2020,102
+Hong Kong,Asia & Australasia,2020,103
+New York,North America,2020,100
+Zurich,Western Europe,2020,103
+Paris,Western Europe,2020,103
+Tel Aviv,Middle East & Africa,2020,101
+Tokyo,Asia & Australasia,2020,95
+Los Angeles,North America,2020,96
+Geneva,Western Europe,2020,100
+Copenhagen,Western Europe,2020,96
+Oslo,Western Europe,2020,90
+Seoul,Asia & Australasia,2020,90
+Minneapolis,North America,2020,82
+San Francisco,North America,2020,83
+Vienna,Western Europe,2020,88
+Amman,Middle East & Africa,2020,80
+Sydney,Asia & Australasia,2020,86
+Helsinki,Western Europe,2020,86
+Frankfurt,Western Europe,2020,86
+Houston,North America,2020,80
+Dublin,Western Europe,2020,85
+Shanghai,Asia & Australasia,2020,82
+Melbourne,Asia & Australasia,2020,85
+London,Western Europe,2020,84
+Bangkok,Asia & Australasia,2020,74
+Shenzhen,Asia & Australasia,2020,81
+Milan,Western Europe,2020,83
+Reykjavik,Western Europe,2020,71
+"Washington, DC",North America,2020,76
+Munich,Western Europe,2020,81
+Nouméa,Asia & Australasia,2020,77
+Boston,North America,2020,75
+Seattle,North America,2020,76
+Chicago,North America,2020,74
+Vancouver,North America,2020,74
+Pittsburgh,North America,2020,75
+Barcelona,Western Europe,2020,78
+Hamburg,Western Europe,2020,80
+Wellington,Asia & Australasia,2020,77
+Auckland,Asia & Australasia,2020,76
+Madrid,Western Europe,2020,78
+Abu Dhabi,Middle East & Africa,2020,72
+Amsterdam,Western Europe,2020,77
+Brisbane,Asia & Australasia,2020,76
+Brussels,Western Europe,2020,77
+Rome,Western Europe,2020,77
+Düsseldorf,Western Europe,2020,77
+Beijing,Asia & Australasia,2020,75
+Dalian,Asia & Australasia,2020,74
+Honolulu,North America,2020,70
+Manchester,Western Europe,2020,74
+Adelaide,Asia & Australasia,2020,74
+Berlin,Western Europe,2020,75
+Hanoi,Asia & Australasia,2020,69
+Mexico city,Latin America & the Caribbean,2020,64
+Lyon,Western Europe,2020,73
+Lexington,North America,2020,68
+Miami,North America,2020,67
+Dubai,Middle East & Africa,2020,66
+Stockholm,Western Europe,2020,72
+Taipei,Asia & Australasia,2020,72
+Atlanta,North America,2020,66
+Lima,Latin America & the Caribbean,2020,63
+Montreal,North America,2020,67
+Cleveland,North America,2020,66
+Dhaka,Asia & Australasia,2020,66
+Nairobi,Middle East & Africa,2020,63
+Tianjin,Asia & Australasia,2020,69
+Luxembourg,Western Europe,2020,69
+Phnom Penh,Asia & Australasia,2020,65
+Suzhou,Asia & Australasia,2020,66
+Detroit,North America,2020,64
+Ho Chi Minh city,Asia & Australasia,2020,64
+Santiago,Latin America & the Caribbean,2020,60
+Guangzhou,Asia & Australasia,2020,67
+Perth,Asia & Australasia,2020,67
+Guatemala city,Latin America & the Caribbean,2020,64
+Qingdao,Asia & Australasia,2020,65
+San José,Latin America & the Caribbean,2020,60
+Quito,Latin America & the Caribbean,2020,60
+Bahrain,Middle East & Africa,2020,60
+Montevideo,Latin America & the Caribbean,2020,56
+Jakarta,Asia & Australasia,2020,56
+Toronto,North America,2020,59
+Kyiv,Eastern Europe,2020,53
+Moscow,Eastern Europe,2020,52
+Lisbon,Western Europe,2020,61
+Athens,Western Europe,2020,61
+Manila,Asia & Australasia,2020,60
+Kuala Lumpur,Asia & Australasia,2020,57
+Prague,Eastern Europe,2020,59
+Doha,Middle East & Africa,2020,56
+Kuwait city,Middle East & Africa,2020,53
+Bandar Seri Begawan,Asia & Australasia,2020,55
+Istanbul,Eastern Europe,2020,47
+Rio de Janeiro,Latin America & the Caribbean,2020,43
+São Paulo,Latin America & the Caribbean,2020,43
+Jeddah,Middle East & Africa,2020,56
+Warsaw,Eastern Europe,2020,56
+Bogotá,Latin America & the Caribbean,2020,50
+Al Khobar,Middle East & Africa,2020,53
+Abidjan,Middle East & Africa,2020,56
+Muscat,Middle East & Africa,2020,54
+Belgrade,Eastern Europe,2020,56
+Tehran,Middle East & Africa,2020,62
+Cairo,Middle East & Africa,2020,54
+St Petersburg,Eastern Europe,2020,47
+Riyadh,Middle East & Africa,2020,54
+Casablanca,Middle East & Africa,2020,52
+Sofia,Eastern Europe,2020,53
+Johannesburg,Middle East & Africa,2020,46
+Budapest,Eastern Europe,2020,50
+Dakar,Middle East & Africa,2020,53
+Panama city,Latin America & the Caribbean,2020,49
+Pretoria,Middle East & Africa,2020,44
+Kathmandu,Asia & Australasia,2020,46
+Mumbai,Asia & Australasia,2020,47
+Colombo,Asia & Australasia,2020,46
+Asunción,Latin America & the Caribbean,2020,41
+Bucharest,Eastern Europe,2020,45
+Lagos,Middle East & Africa,2020,42
+Algiers,Middle East & Africa,2020,39
+New Delhi,Asia & Australasia,2020,42
+Bangalore,Asia & Australasia,2020,40
+Chennai,Asia & Australasia,2020,40
+Lusaka,Middle East & Africa,2020,30
+Caracas,Latin America & the Caribbean,2020,30
+Karachi,Asia & Australasia,2020,35
+Buenos Aires,Latin America & the Caribbean,2020,35
+Almaty,Eastern Europe,2020,33
+Tashkent,Eastern Europe,2020,29
+Damascus,Middle East & Africa,2020,22
+Osaka,Asia & Australasia,2019,102
+Singapore,Asia & Australasia,2019,102
+Hong Kong,Asia & Australasia,2019,102
+New York,North America,2019,100
+Zurich,Western Europe,2019,99
+Paris,Western Europe,2019,99
+Tel Aviv,Middle East & Africa,2019,97
+Tokyo,Asia & Australasia,2019,96
+Los Angeles,North America,2019,96
+Geneva,Western Europe,2019,95
+Copenhagen,Western Europe,2019,92
+Oslo,Western Europe,2019,90
+Seoul,Asia & Australasia,2019,90
+Minneapolis,North America,2019,84
+San Francisco,North America,2019,83
+Vienna,Western Europe,2019,83
+Amman,Middle East & Africa,2019,82
+Sydney,Asia & Australasia,2019,82
+Helsinki,Western Europe,2019,82
+Frankfurt,Western Europe,2019,82
+Houston,North America,2019,81
+Dublin,Western Europe,2019,81
+Shanghai,Asia & Australasia,2019,80
+Melbourne,Asia & Australasia,2019,80
+London,Western Europe,2019,80
+Bangkok,Asia & Australasia,2019,79
+Shenzhen,Asia & Australasia,2019,79
+Milan,Western Europe,2019,79
+Reykjavik,Western Europe,2019,78
+"Washington, DC",North America,2019,77
+Munich,Western Europe,2019,77
+Nouméa,Asia & Australasia,2019,77
+Boston,North America,2019,76
+Seattle,North America,2019,76
+Chicago,North America,2019,76
+Vancouver,North America,2019,75
+Pittsburgh,North America,2019,75
+Barcelona,Western Europe,2019,75
+Hamburg,Western Europe,2019,75
+Wellington,Asia & Australasia,2019,74
+Auckland,Asia & Australasia,2019,74
+Madrid,Western Europe,2019,74
+Abu Dhabi,Middle East & Africa,2019,73
+Amsterdam,Western Europe,2019,73
+Brisbane,Asia & Australasia,2019,73
+Brussels,Western Europe,2019,73
+Rome,Western Europe,2019,73
+Düsseldorf,Western Europe,2019,73
+Beijing,Asia & Australasia,2019,72
+Dalian,Asia & Australasia,2019,72
+Honolulu,North America,2019,71
+Manchester,Western Europe,2019,71
+Adelaide,Asia & Australasia,2019,71
+Berlin,Western Europe,2019,71
+Hanoi,Asia & Australasia,2019,70
+Mexico city,Latin America & the Caribbean,2019,70
+Lyon,Western Europe,2019,69
+Lexington,North America,2019,68
+Miami,North America,2019,68
+Dubai,Middle East & Africa,2019,68
+Stockholm,Western Europe,2019,68
+Taipei,Asia & Australasia,2019,68
+Atlanta,North America,2019,66
+Lima,Latin America & the Caribbean,2019,66
+Montreal,North America,2019,66
+Cleveland,North America,2019,66
+Dhaka,Asia & Australasia,2019,66
+Nairobi,Middle East & Africa,2019,66
+Tianjin,Asia & Australasia,2019,66
+Luxembourg,Western Europe,2019,66
+Phnom Penh,Asia & Australasia,2019,65
+Suzhou,Asia & Australasia,2019,65
+Detroit,North America,2019,65
+Ho Chi Minh city,Asia & Australasia,2019,64
+Santiago,Latin America & the Caribbean,2019,64
+Guangzhou,Asia & Australasia,2019,64
+Perth,Asia & Australasia,2019,64
+Guatemala city,Latin America & the Caribbean,2019,63
+Qingdao,Asia & Australasia,2019,63
+San José,Latin America & the Caribbean,2019,62
+Quito,Latin America & the Caribbean,2019,61
+Bahrain,Middle East & Africa,2019,60
+Montevideo,Latin America & the Caribbean,2019,60
+Jakarta,Asia & Australasia,2019,59
+Toronto,North America,2019,59
+Kyiv,Eastern Europe,2019,58
+Moscow,Eastern Europe,2019,58
+Lisbon,Western Europe,2019,58
+Athens,Western Europe,2019,58
+Manila,Asia & Australasia,2019,57
+Kuala Lumpur,Asia & Australasia,2019,57
+Prague,Eastern Europe,2019,57
+Doha,Middle East & Africa,2019,55
+Kuwait city,Middle East & Africa,2019,55
+Bandar Seri Begawan,Asia & Australasia,2019,55
+Istanbul,Eastern Europe,2019,54
+Rio de Janeiro,Latin America & the Caribbean,2019,54
+São Paulo,Latin America & the Caribbean,2019,54
+Jeddah,Middle East & Africa,2019,54
+Warsaw,Eastern Europe,2019,54
+Bogotá,Latin America & the Caribbean,2019,54
+Al Khobar,Middle East & Africa,2019,53
+Abidjan,Middle East & Africa,2019,53
+Muscat,Middle East & Africa,2019,53
+Belgrade,Eastern Europe,2019,53
+Tehran,Middle East & Africa,2019,52
+Cairo,Middle East & Africa,2019,52
+St Petersburg,Eastern Europe,2019,52
+Riyadh,Middle East & Africa,2019,52
+Casablanca,Middle East & Africa,2019,52
+Sofia,Eastern Europe,2019,52
+Johannesburg,Middle East & Africa,2019,51
+Budapest,Eastern Europe,2019,51
+Dakar,Middle East & Africa,2019,51
+Panama city,Latin America & the Caribbean,2019,50
+Pretoria,Middle East & Africa,2019,48
+Kathmandu,Asia & Australasia,2019,47
+Mumbai,Asia & Australasia,2019,46
+Colombo,Asia & Australasia,2019,46
+Asunción,Latin America & the Caribbean,2019,45
+Bucharest,Eastern Europe,2019,43
+Lagos,Middle East & Africa,2019,42
+Algiers,Middle East & Africa,2019,42
+New Delhi,Asia & Australasia,2019,42
+Bangalore,Asia & Australasia,2019,40
+Chennai,Asia & Australasia,2019,39
+Lusaka,Middle East & Africa,2019,38
+Caracas,Latin America & the Caribbean,2019,36
+Karachi,Asia & Australasia,2019,35
+Buenos Aires,Latin America & the Caribbean,2019,35
+Almaty,Eastern Europe,2019,34
+Tashkent,Eastern Europe,2019,30
+Damascus,Middle East & Africa,2019,25
+Singapore,Asia & Australasia,2018,107
+New York,North America,2018,100
+Tel Aviv,Middle East & Africa,2018,99
+Hong Kong,Asia & Australasia,2018,107
+Los Angeles,North America,2018,99
+Zurich,Western Europe,2018,106
+Geneva,Western Europe,2018,101
+San Francisco,North America,2018,85
+Paris,Western Europe,2018,107
+Copenhagen,Western Europe,2018,100
+Sydney,Asia & Australasia,2018,89
+Houston,North America,2018,82
+Oslo,Western Europe,2018,98
+Minneapolis,North America,2018,87
+Melbourne,Asia & Australasia,2018,86
+Seattle,North America,2018,79
+Seoul,Asia & Australasia,2018,100
+Shanghai,Asia & Australasia,2018,85
+Amman,Middle East & Africa,2018,85
+Shenzhen,Asia & Australasia,2018,85
+"Washington, DC",North America,2018,81
+Boston,North America,2018,75
+Vienna,Western Europe,2018,91
+Vancouver,North America,2018,77
+Pittsburgh,North America,2018,77
+Chicago,North America,2018,79
+Helsinki,Western Europe,2018,89
+London,Western Europe,2018,86
+Dublin,Western Europe,2018,88
+Frankfurt,Western Europe,2018,89
+Milan,Western Europe,2018,86
+Brisbane,Asia & Australasia,2018,78
+Beijing,Asia & Australasia,2018,76
+Reykjavik,Western Europe,2018,90
+Dalian,Asia & Australasia,2018,77
+Tokyo,Asia & Australasia,2018,96
+Wellington,Asia & Australasia,2018,78
+Auckland,Asia & Australasia,2018,79
+Adelaide,Asia & Australasia,2018,75
+Honolulu,North America,2018,74
+Moscow,Eastern Europe,2018,55
+Osaka,Asia & Australasia,2018,101
+Munich,Western Europe,2018,83
+Mexico city,Latin America & the Caribbean,2018,72
+Hamburg,Western Europe,2018,82
+Atlanta,North America,2018,66
+Barcelona,Western Europe,2018,81
+Madrid,Western Europe,2018,80
+Amsterdam,Western Europe,2018,78
+Düsseldorf,Western Europe,2018,81
+Abu Dhabi,Middle East & Africa,2018,76
+Lexington,North America,2018,70
+Miami,North America,2018,71
+Cleveland,North America,2018,68
+Nouméa,Asia & Australasia,2018,87
+Brussels,Western Europe,2018,80
+Taipei,Asia & Australasia,2018,73
+Montreal,North America,2018,68
+Tianjin,Asia & Australasia,2018,69
+Manchester,Western Europe,2018,75
+Rome,Western Europe,2018,81
+Berlin,Western Europe,2018,77
+Suzhou,Asia & Australasia,2018,67
+Guangzhou,Asia & Australasia,2018,68
+Perth,Asia & Australasia,2018,69
+Detroit,North America,2018,68
+St Petersburg,Eastern Europe,2018,50
+Hanoi,Asia & Australasia,2018,71
+Phnom Penh,Asia & Australasia,2018,66
+Bangkok,Asia & Australasia,2018,78
+Guatemala city,Latin America & the Caribbean,2018,67
+Lyon,Western Europe,2018,75
+Qingdao,Asia & Australasia,2018,67
+Dubai,Middle East & Africa,2018,72
+Montevideo,Latin America & the Caribbean,2018,67
+Lima,Latin America & the Caribbean,2018,66
+Stockholm,Western Europe,2018,73
+Dhaka,Asia & Australasia,2018,68
+Ho Chi Minh city,Asia & Australasia,2018,65
+Luxembourg,Western Europe,2018,71
+Toronto,North America,2018,60
+Nairobi,Middle East & Africa,2018,69
+Quito,Latin America & the Caribbean,2018,63
+Bahrain,Middle East & Africa,2018,61
+San José,Latin America & the Caribbean,2018,63
+Prague,Eastern Europe,2018,63
+Santiago,Latin America & the Caribbean,2018,66
+Jakarta,Asia & Australasia,2018,57
+Doha,Middle East & Africa,2018,57
+Athens,Western Europe,2018,64
+Jeddah,Middle East & Africa,2018,56
+Lisbon,Western Europe,2018,63
+Manila,Asia & Australasia,2018,57
+Kuala Lumpur,Asia & Australasia,2018,59
+Bandar Seri Begawan,Asia & Australasia,2018,58
+Riyadh,Middle East & Africa,2018,54
+Kuwait city,Middle East & Africa,2018,57
+Muscat,Middle East & Africa,2018,57
+Al Khobar,Middle East & Africa,2018,55
+Warsaw,Eastern Europe,2018,57
+Abidjan,Middle East & Africa,2018,56
+Belgrade,Eastern Europe,2018,57
+Sofia,Eastern Europe,2018,58
+Rio de Janeiro,Latin America & the Caribbean,2018,52
+São Paulo,Latin America & the Caribbean,2018,53
+Panama city,Latin America & the Caribbean,2018,52
+Casablanca,Middle East & Africa,2018,57
+Cairo,Middle East & Africa,2018,49
+Dakar,Middle East & Africa,2018,55
+Johannesburg,Middle East & Africa,2018,50
+Lagos,Middle East & Africa,2018,40
+Bogotá,Latin America & the Caribbean,2018,59
+Mumbai,Asia & Australasia,2018,45
+Asunción,Latin America & the Caribbean,2018,49
+Budapest,Eastern Europe,2018,54
+Pretoria,Middle East & Africa,2018,47
+Kathmandu,Asia & Australasia,2018,48
+Buenos Aires,Latin America & the Caribbean,2018,41
+Bucharest,Eastern Europe,2018,47
+Lusaka,Middle East & Africa,2018,49
+Istanbul,Eastern Europe,2018,46
+New Delhi,Asia & Australasia,2018,43
+Caracas,Latin America & the Caribbean,2018,15
+Colombo,Asia & Australasia,2018,51
+Kyiv,Eastern Europe,2018,52
+Bangalore,Asia & Australasia,2018,39
+Algiers,Middle East & Africa,2018,43
+Chennai,Asia & Australasia,2018,41
+Almaty,Eastern Europe,2018,35
+Karachi,Asia & Australasia,2018,40
+Tashkent,Eastern Europe,2018,33
+Tehran,Middle East & Africa,2018,46
+Damascus,Middle East & Africa,2018,25
+Singapore,Asia & Australasia,2017,116
+New York,North America,2017,100
+Tel Aviv,Middle East & Africa,2017,103
+Hong Kong,Asia & Australasia,2017,111
+Los Angeles,North America,2017,99
+Zurich,Western Europe,2017,112
+Geneva,Western Europe,2017,106
+San Francisco,North America,2017,84
+Paris,Western Europe,2017,112
+Copenhagen,Western Europe,2017,105
+Sydney,Asia & Australasia,2017,102
+Houston,North America,2017,83
+Oslo,Western Europe,2017,107
+Minneapolis,North America,2017,88
+Melbourne,Asia & Australasia,2017,99
+Seattle,North America,2017,80
+Seoul,Asia & Australasia,2017,106
+Shanghai,Asia & Australasia,2017,92
+Amman,Middle East & Africa,2017,87
+Shenzhen,Asia & Australasia,2017,90
+"Washington, DC",North America,2017,84
+Boston,North America,2017,75
+Vienna,Western Europe,2017,96
+Vancouver,North America,2017,83
+Pittsburgh,North America,2017,79
+Chicago,North America,2017,83
+Helsinki,Western Europe,2017,95
+London,Western Europe,2017,86
+Dublin,Western Europe,2017,93
+Frankfurt,Western Europe,2017,93
+Milan,Western Europe,2017,91
+Brisbane,Asia & Australasia,2017,88
+Beijing,Asia & Australasia,2017,80
+Reykjavik,Western Europe,2017,99
+Dalian,Asia & Australasia,2017,83
+Tokyo,Asia & Australasia,2017,101
+Wellington,Asia & Australasia,2017,89
+Auckland,Asia & Australasia,2017,89
+Adelaide,Asia & Australasia,2017,86
+Honolulu,North America,2017,77
+Moscow,Eastern Europe,2017,66
+Osaka,Asia & Australasia,2017,101
+Munich,Western Europe,2017,86
+Mexico city,Latin America & the Caribbean,2017,74
+Hamburg,Western Europe,2017,87
+Atlanta,North America,2017,69
+Barcelona,Western Europe,2017,85
+Madrid,Western Europe,2017,85
+Amsterdam,Western Europe,2017,81
+Düsseldorf,Western Europe,2017,85
+Abu Dhabi,Middle East & Africa,2017,73
+Lexington,North America,2017,72
+Miami,North America,2017,74
+Cleveland,North America,2017,70
+Nouméa,Asia & Australasia,2017,77
+Brussels,Western Europe,2017,84
+Taipei,Asia & Australasia,2017,77
+Montreal,North America,2017,74
+Tianjin,Asia & Australasia,2017,72
+Manchester,Western Europe,2017,75
+Rome,Western Europe,2017,86
+Berlin,Western Europe,2017,80
+Suzhou,Asia & Australasia,2017,71
+Guangzhou,Asia & Australasia,2017,73
+Perth,Asia & Australasia,2017,80
+Detroit,North America,2017,70
+St Petersburg,Eastern Europe,2017,60
+Hanoi,Asia & Australasia,2017,72
+Phnom Penh,Asia & Australasia,2017,67
+Bangkok,Asia & Australasia,2017,79
+Guatemala city,Latin America & the Caribbean,2017,72
+Lyon,Western Europe,2017,78
+Qingdao,Asia & Australasia,2017,73
+Dubai,Middle East & Africa,2017,72
+Montevideo,Latin America & the Caribbean,2017,73
+Lima,Latin America & the Caribbean,2017,68
+Stockholm,Western Europe,2017,84
+Dhaka,Asia & Australasia,2017,71
+Ho Chi Minh city,Asia & Australasia,2017,67
+Luxembourg,Western Europe,2017,75
+Toronto,North America,2017,66
+Nairobi,Middle East & Africa,2017,69
+Quito,Latin America & the Caribbean,2017,65
+Bahrain,Middle East & Africa,2017,63
+San José,Latin America & the Caribbean,2017,65
+Prague,Eastern Europe,2017,67
+Santiago,Latin America & the Caribbean,2017,72
+Jakarta,Asia & Australasia,2017,65
+Doha,Middle East & Africa,2017,59
+Athens,Western Europe,2017,66
+Jeddah,Middle East & Africa,2017,57
+Lisbon,Western Europe,2017,66
+Manila,Asia & Australasia,2017,59
+Kuala Lumpur,Asia & Australasia,2017,60
+Bandar Seri Begawan,Asia & Australasia,2017,62
+Riyadh,Middle East & Africa,2017,52
+Kuwait city,Middle East & Africa,2017,59
+Muscat,Middle East & Africa,2017,57
+Al Khobar,Middle East & Africa,2017,57
+Warsaw,Eastern Europe,2017,62
+Abidjan,Middle East & Africa,2017,61
+Belgrade,Eastern Europe,2017,60
+Sofia,Eastern Europe,2017,51
+Rio de Janeiro,Latin America & the Caribbean,2017,67
+São Paulo,Latin America & the Caribbean,2017,69
+Panama city,Latin America & the Caribbean,2017,54
+Casablanca,Middle East & Africa,2017,54
+Cairo,Middle East & Africa,2017,49
+Dakar,Middle East & Africa,2017,58
+Johannesburg,Middle East & Africa,2017,58
+Lagos,Middle East & Africa,2017,40
+Bogotá,Latin America & the Caribbean,2017,63
+Mumbai,Asia & Australasia,2017,49
+Asunción,Latin America & the Caribbean,2017,51
+Budapest,Eastern Europe,2017,59
+Pretoria,Middle East & Africa,2017,55
+Kathmandu,Asia & Australasia,2017,53
+Buenos Aires,Latin America & the Caribbean,2017,69
+Bucharest,Eastern Europe,2017,48
+Lusaka,Middle East & Africa,2017,52
+Istanbul,Eastern Europe,2017,71
+New Delhi,Asia & Australasia,2017,48
+Caracas,Latin America & the Caribbean,2017,33
+Colombo,Asia & Australasia,2017,54
+Bangalore,Asia & Australasia,2017,44
+Algiers,Middle East & Africa,2017,46
+Chennai,Asia & Australasia,2017,47
+Almaty,Eastern Europe,2017,38
+Karachi,Asia & Australasia,2017,46
+Tashkent,Eastern Europe,2017,54
+Tehran,Middle East & Africa,2017,49
+Damascus,Middle East & Africa,2017,26
+Tel Aviv,Middle East & Africa,2016,99
+Paris,Western Europe,2016,107
+Singapore,Asia & Australasia,2016,120
+Zurich,Western Europe,2016,113
+Hong Kong,Asia & Australasia,2016,114
+New York,North America,2016,100
+Geneva,Western Europe,2016,107
+Copenhagen,Western Europe,2016,100
+Los Angeles,North America,2016,99
+Osaka,Asia & Australasia,2016,109
+Oslo,Western Europe,2016,99
+Seoul,Asia & Australasia,2016,108
+Tokyo,Asia & Australasia,2016,110
+Vienna,Western Europe,2016,91
+Sydney,Asia & Australasia,2016,98
+Melbourne,Asia & Australasia,2016,95
+Helsinki,Western Europe,2016,92
+London,Western Europe,2016,89
+Dublin,Western Europe,2016,88
+Frankfurt,Western Europe,2016,90
+Shanghai,Asia & Australasia,2016,92
+Milan,Western Europe,2016,85
+Shenzhen,Asia & Australasia,2016,91
+San Francisco,North America,2016,83
+Munich,Western Europe,2016,82
+Wellington,Asia & Australasia,2016,92
+Minneapolis,North America,2016,88
+Auckland,Asia & Australasia,2016,92
+Houston,North America,2016,82
+Hamburg,Western Europe,2016,83
+Tehran,Middle East & Africa,2016,50
+Amman,Middle East & Africa,2016,85
+Barcelona,Western Europe,2016,81
+Nouméa,Asia & Australasia,2016,81
+Madrid,Western Europe,2016,80
+Brussels,Western Europe,2016,81
+Brisbane,Asia & Australasia,2016,84
+Beijing,Asia & Australasia,2016,79
+Reykjavik,Western Europe,2016,92
+Amsterdam,Western Europe,2016,75
+Düsseldorf,Western Europe,2016,81
+"Washington, DC",North America,2016,86
+Seattle,North America,2016,80
+Manchester,Western Europe,2016,77
+Vancouver,North America,2016,81
+Dalian,Asia & Australasia,2016,83
+Adelaide,Asia & Australasia,2016,82
+Rome,Western Europe,2016,82
+Boston,North America,2016,74
+Pittsburgh,North America,2016,79
+Berlin,Western Europe,2016,77
+Taipei,Asia & Australasia,2016,75
+Chicago,North America,2016,86
+Lyon,Western Europe,2016,75
+Stockholm,Western Europe,2016,80
+Tianjin,Asia & Australasia,2016,71
+Bangkok,Asia & Australasia,2016,77
+Abu Dhabi,Middle East & Africa,2016,72
+Honolulu,North America,2016,78
+Luxembourg,Western Europe,2016,72
+Suzhou,Asia & Australasia,2016,71
+Montreal,North America,2016,72
+Guangzhou,Asia & Australasia,2016,71
+Perth,Asia & Australasia,2016,78
+Hanoi,Asia & Australasia,2016,73
+Mexico city,Latin America & the Caribbean,2016,66
+Lexington,North America,2016,73
+Miami,North America,2016,76
+Cleveland,North America,2016,70
+Qingdao,Asia & Australasia,2016,73
+Atlanta,North America,2016,69
+Dhaka,Asia & Australasia,2016,72
+Phnom Penh,Asia & Australasia,2016,67
+Dubai,Middle East & Africa,2016,72
+Ho Chi Minh city,Asia & Australasia,2016,67
+Detroit,North America,2016,71
+Guatemala city,Latin America & the Caribbean,2016,71
+Nairobi,Middle East & Africa,2016,69
+Lisbon,Western Europe,2016,64
+Toronto,North America,2016,65
+Prague,Eastern Europe,2016,62
+Athens,Western Europe,2016,63
+Santiago,Latin America & the Caribbean,2016,65
+Manila,Asia & Australasia,2016,63
+Quito,Latin America & the Caribbean,2016,66
+Bahrain,Middle East & Africa,2016,65
+Montevideo,Latin America & the Caribbean,2016,72
+Lima,Latin America & the Caribbean,2016,65
+Jakarta,Asia & Australasia,2016,66
+Kyiv,Eastern Europe,2016,47
+San José,Latin America & the Caribbean,2016,67
+Kuala Lumpur,Asia & Australasia,2016,61
+Warsaw,Eastern Europe,2016,58
+Abidjan,Middle East & Africa,2016,59
+Belgrade,Eastern Europe,2016,55
+Doha,Middle East & Africa,2016,59
+Jeddah,Middle East & Africa,2016,58
+Bandar Seri Begawan,Asia & Australasia,2016,63
+Moscow,Eastern Europe,2016,60
+Cairo,Middle East & Africa,2016,59
+Kuwait city,Middle East & Africa,2016,59
+Sofia,Eastern Europe,2016,54
+Casablanca,Middle East & Africa,2016,57
+Muscat,Middle East & Africa,2016,58
+Riyadh,Middle East & Africa,2016,54
+Dakar,Middle East & Africa,2016,56
+Budapest,Eastern Europe,2016,56
+Johannesburg,Middle East & Africa,2016,51
+Al Khobar,Middle East & Africa,2016,58
+Pretoria,Middle East & Africa,2016,48
+Bogotá,Latin America & the Caribbean,2016,61
+St Petersburg,Eastern Europe,2016,54
+Panama city,Latin America & the Caribbean,2016,54
+Istanbul,Eastern Europe,2016,72
+Mumbai,Asia & Australasia,2016,45
+Kathmandu,Asia & Australasia,2016,51
+Rio de Janeiro,Latin America & the Caribbean,2016,65
+São Paulo,Latin America & the Caribbean,2016,67
+Bucharest,Eastern Europe,2016,47
+Colombo,Asia & Australasia,2016,56
+Lagos,Middle East & Africa,2016,39
+New Delhi,Asia & Australasia,2016,47
+Asunción,Latin America & the Caribbean,2016,51
+Bangalore,Asia & Australasia,2016,42
+Chennai,Asia & Australasia,2016,45
+Caracas,Latin America & the Caribbean,2016,50
+Buenos Aires,Latin America & the Caribbean,2016,66
+Lusaka,Middle East & Africa,2016,49
+Algiers,Middle East & Africa,2016,45
+Karachi,Asia & Australasia,2016,44
+Almaty,Eastern Europe,2016,38
+Tashkent,Eastern Europe,2016,68
+Damascus,Middle East & Africa,2016,50
+Osaka,Asia & Australasia,2015,95
+Singapore,Asia & Australasia,2015,116
+Hong Kong,Asia & Australasia,2015,114
+New York,North America,2015,100
+Zurich,Western Europe,2015,114
+Paris,Western Europe,2015,107
+Tel Aviv,Middle East & Africa,2015,95
+Tokyo,Asia & Australasia,2015,97
+Los Angeles,North America,2015,99
+Geneva,Western Europe,2015,108
+Copenhagen,Western Europe,2015,99
+Oslo,Western Europe,2015,96
+Seoul,Asia & Australasia,2015,99
+Minneapolis,North America,2015,87
+San Francisco,North America,2015,82
+Vienna,Western Europe,2015,91
+Amman,Middle East & Africa,2015,84
+Sydney,Asia & Australasia,2015,90
+Helsinki,Western Europe,2015,93
+Frankfurt,Western Europe,2015,91
+Houston,North America,2015,83
+Dublin,Western Europe,2015,87
+Shanghai,Asia & Australasia,2015,97
+Melbourne,Asia & Australasia,2015,88
+London,Western Europe,2015,101
+Bangkok,Asia & Australasia,2015,73
+Shenzhen,Asia & Australasia,2015,94
+Milan,Western Europe,2015,85
+Reykjavik,Western Europe,2015,84
+"Washington, DC",North America,2015,86
+Munich,Western Europe,2015,83
+Nouméa,Asia & Australasia,2015,80
+Boston,North America,2015,74
+Seattle,North America,2015,80
+Chicago,North America,2015,88
+Vancouver,North America,2015,77
+Pittsburgh,North America,2015,79
+Barcelona,Western Europe,2015,81
+Hamburg,Western Europe,2015,82
+Wellington,Asia & Australasia,2015,80
+Auckland,Asia & Australasia,2015,81
+Madrid,Western Europe,2015,81
+Abu Dhabi,Middle East & Africa,2015,74
+Amsterdam,Western Europe,2015,74
+Brisbane,Asia & Australasia,2015,77
+Brussels,Western Europe,2015,81
+Rome,Western Europe,2015,82
+Düsseldorf,Western Europe,2015,82
+Beijing,Asia & Australasia,2015,83
+Dalian,Asia & Australasia,2015,88
+Honolulu,North America,2015,79
+Manchester,Western Europe,2015,86
+Adelaide,Asia & Australasia,2015,75
+Berlin,Western Europe,2015,78
+Hanoi,Asia & Australasia,2015,73
+Mexico city,Latin America & the Caribbean,2015,69
+Lyon,Western Europe,2015,75
+Lexington,North America,2015,73
+Miami,North America,2015,77
+Dubai,Middle East & Africa,2015,71
+Stockholm,Western Europe,2015,80
+Taipei,Asia & Australasia,2015,72
+Atlanta,North America,2015,69
+Lima,Latin America & the Caribbean,2015,66
+Montreal,North America,2015,70
+Cleveland,North America,2015,69
+Dhaka,Asia & Australasia,2015,70
+Nairobi,Middle East & Africa,2015,67
+Tianjin,Asia & Australasia,2015,74
+Luxembourg,Western Europe,2015,72
+Phnom Penh,Asia & Australasia,2015,67
+Suzhou,Asia & Australasia,2015,75
+Detroit,North America,2015,71
+Ho Chi Minh city,Asia & Australasia,2015,66
+Santiago,Latin America & the Caribbean,2015,61
+Guangzhou,Asia & Australasia,2015,74
+Perth,Asia & Australasia,2015,74
+Guatemala city,Latin America & the Caribbean,2015,71
+Qingdao,Asia & Australasia,2015,76
+San José,Latin America & the Caribbean,2015,69
+Quito,Latin America & the Caribbean,2015,66
+Bahrain,Middle East & Africa,2015,63
+Montevideo,Latin America & the Caribbean,2015,68
+Jakarta,Asia & Australasia,2015,61
+Toronto,North America,2015,62
+Kyiv,Eastern Europe,2015,48
+Moscow,Eastern Europe,2015,53
+Lisbon,Western Europe,2015,64
+Athens,Western Europe,2015,64
+Manila,Asia & Australasia,2015,62
+Kuala Lumpur,Asia & Australasia,2015,57
+Prague,Eastern Europe,2015,62
+Doha,Middle East & Africa,2015,60
+Kuwait city,Middle East & Africa,2015,59
+Bandar Seri Begawan,Asia & Australasia,2015,59
+Istanbul,Eastern Europe,2015,67
+Rio de Janeiro,Latin America & the Caribbean,2015,53
+São Paulo,Latin America & the Caribbean,2015,55
+Jeddah,Middle East & Africa,2015,57
+Warsaw,Eastern Europe,2015,59
+Bogotá,Latin America & the Caribbean,2015,55
+Al Khobar,Middle East & Africa,2015,59
+Abidjan,Middle East & Africa,2015,59
+Muscat,Middle East & Africa,2015,57
+Belgrade,Eastern Europe,2015,56
+Tehran,Middle East & Africa,2015,48
+Cairo,Middle East & Africa,2015,61
+St Petersburg,Eastern Europe,2015,48
+Riyadh,Middle East & Africa,2015,55
+Casablanca,Middle East & Africa,2015,57
+Sofia,Eastern Europe,2015,54
+Johannesburg,Middle East & Africa,2015,50
+Budapest,Eastern Europe,2015,55
+Dakar,Middle East & Africa,2015,56
+Panama city,Latin America & the Caribbean,2015,54
+Pretoria,Middle East & Africa,2015,47
+Kathmandu,Asia & Australasia,2015,48
+Mumbai,Asia & Australasia,2015,43
+Colombo,Asia & Australasia,2015,57
+Asunción,Latin America & the Caribbean,2015,51
+Bucharest,Eastern Europe,2015,47
+Lagos,Middle East & Africa,2015,50
+Algiers,Middle East & Africa,2015,44
+New Delhi,Asia & Australasia,2015,45
+Bangalore,Asia & Australasia,2015,42
+Chennai,Asia & Australasia,2015,44
+Lusaka,Middle East & Africa,2015,41
+Caracas,Latin America & the Caribbean,2015,46
+Karachi,Asia & Australasia,2015,44
+Buenos Aires,Latin America & the Caribbean,2015,73
+Almaty,Eastern Europe,2015,44
+Tashkent,Eastern Europe,2015,63
+Damascus,Middle East & Africa,2015,46
+Nairobi,Middle East & Africa,2014,69
+Abidjan,Middle East & Africa,2014,61
+Dakar,Middle East & Africa,2014,58
+Johannesburg,Middle East & Africa,2014,58
+Lusaka,Middle East & Africa,2014,52
+Pretoria,Middle East & Africa,2014,55
+Lagos,Middle East & Africa,2014,40
+Singapore,Asia & Australasia,2014,116
+Hong Kong,Asia & Australasia,2014,111
+Osaka,Asia & Australasia,2014,101
+Seoul,Asia & Australasia,2014,106
+Tokyo,Asia & Australasia,2014,101
+Sydney,Asia & Australasia,2014,102
+Nouméa,Asia & Australasia,2014,77
+Melbourne,Asia & Australasia,2014,99
+Shanghai,Asia & Australasia,2014,92
+Shenzhen,Asia & Australasia,2014,90
+Auckland,Asia & Australasia,2014,89
+Brisbane,Asia & Australasia,2014,88
+Bangkok,Asia & Australasia,2014,79
+Wellington,Asia & Australasia,2014,89
+Dalian,Asia & Australasia,2014,83
+Beijing,Asia & Australasia,2014,80
+Adelaide,Asia & Australasia,2014,86
+Taipei,Asia & Australasia,2014,77
+Hanoi,Asia & Australasia,2014,72
+Tianjin,Asia & Australasia,2014,72
+Perth,Asia & Australasia,2014,80
+Guangzhou,Asia & Australasia,2014,73
+Dhaka,Asia & Australasia,2014,71
+Qingdao,Asia & Australasia,2014,73
+Suzhou,Asia & Australasia,2014,71
+Phnom Penh,Asia & Australasia,2014,67
+Ho Chi Minh city,Asia & Australasia,2014,67
+Kuala Lumpur,Asia & Australasia,2014,60
+Bandar Seri Begawan,Asia & Australasia,2014,62
+Jakarta,Asia & Australasia,2014,65
+Manila,Asia & Australasia,2014,59
+Colombo,Asia & Australasia,2014,54
+Kathmandu,Asia & Australasia,2014,53
+Mumbai,Asia & Australasia,2014,49
+New Delhi,Asia & Australasia,2014,48
+Chennai,Asia & Australasia,2014,47
+Karachi,Asia & Australasia,2014,46
+Bangalore,Asia & Australasia,2014,44
+Prague,Eastern Europe,2014,62
+Sofia,Eastern Europe,2014,51
+Warsaw,Eastern Europe,2014,62
+Belgrade,Eastern Europe,2014,60
+Moscow,Eastern Europe,2014,66
+Budapest,Eastern Europe,2014,59
+Kyiv,Eastern Europe,2014,55
+St Petersburg,Eastern Europe,2014,60
+Bucharest,Eastern Europe,2014,48
+Istanbul,Eastern Europe,2014,71
+Almaty,Eastern Europe,2014,38
+Tashkent,Eastern Europe,2014,54
+Mexico city,Latin America & the Caribbean,2014,74
+Montevideo,Latin America & the Caribbean,2014,73
+Guatemala city,Latin America & the Caribbean,2014,72
+Santiago,Latin America & the Caribbean,2014,72
+Lima,Latin America & the Caribbean,2014,68
+San José,Latin America & the Caribbean,2014,65
+Quito,Latin America & the Caribbean,2014,65
+Bogotá,Latin America & the Caribbean,2014,63
+São Paulo,Latin America & the Caribbean,2014,69
+Rio de Janeiro,Latin America & the Caribbean,2014,67
+Panama city,Latin America & the Caribbean,2014,54
+Asunción,Latin America & the Caribbean,2014,51
+Buenos Aires,Latin America & the Caribbean,2014,69
+Caracas,Latin America & the Caribbean,2014,33
+Tel Aviv,Middle East & Africa,2014,103
+Amman,Middle East & Africa,2014,87
+Abu Dhabi,Middle East & Africa,2014,73
+Dubai,Middle East & Africa,2014,72
+Bahrain,Middle East & Africa,2014,63
+Casablanca,Middle East & Africa,2014,54
+Muscat,Middle East & Africa,2014,57
+Doha,Middle East & Africa,2014,59
+Kuwait city,Middle East & Africa,2014,59
+Jeddah,Middle East & Africa,2014,57
+Al Khobar,Middle East & Africa,2014,57
+Riyadh,Middle East & Africa,2014,52
+Cairo,Middle East & Africa,2014,49
+Tehran,Middle East & Africa,2014,49
+Algiers,Middle East & Africa,2014,46
+Damascus,Middle East & Africa,2014,26
+New York,North America,2014,100
+Los Angeles,North America,2014,99
+Minneapolis,North America,2014,88
+San Francisco,North America,2014,84
+Houston,North America,2014,83
+"Washington, DC",North America,2014,84
+Chicago,North America,2014,83
+Seattle,North America,2014,80
+Vancouver,North America,2014,83
+Pittsburgh,North America,2014,79
+Boston,North America,2014,75
+Honolulu,North America,2014,77
+Miami,North America,2014,74
+Lexington,North America,2014,72
+Montreal,North America,2014,74
+Detroit,North America,2014,70
+Cleveland,North America,2014,70
+Atlanta,North America,2014,69
+Toronto,North America,2014,66
+Paris,Western Europe,2014,112
+Zurich,Western Europe,2014,112
+Geneva,Western Europe,2014,106
+Copenhagen,Western Europe,2014,105
+Oslo,Western Europe,2014,107
+Vienna,Western Europe,2014,96
+Reykjavik,Western Europe,2014,99
+Helsinki,Western Europe,2014,95
+Frankfurt,Western Europe,2014,93
+Dublin,Western Europe,2014,93
+Milan,Western Europe,2014,91
+London,Western Europe,2014,86
+Munich,Western Europe,2014,86
+Hamburg,Western Europe,2014,87
+Rome,Western Europe,2014,86
+Düsseldorf,Western Europe,2014,85
+Barcelona,Western Europe,2014,85
+Madrid,Western Europe,2014,85
+Brussels,Western Europe,2014,84
+Amsterdam,Western Europe,2014,81
+Berlin,Western Europe,2014,80
+Lyon,Western Europe,2014,78
+Manchester,Western Europe,2014,75
+Stockholm,Western Europe,2014,84
+Luxembourg,Western Europe,2014,75
+Athens,Western Europe,2014,66
+Lisbon,Western Europe,2014,66
