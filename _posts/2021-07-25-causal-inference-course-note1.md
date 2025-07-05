@@ -297,8 +297,8 @@ Consider a study comparing two diabetes treatments, where we have new initiators
   * Patients with past use of OAD drugs are at higher risk for MACE.
 * Main idea:
   * Compute rate of MACE for saxagliptin and sitagliptin initiators in two subpopulations:
-    * patients who have had no prior OAC use.
-    * patients who have had prior OAC use.
+    * patients who have had no prior OAD use.
+    * patients who have had prior OAD use.
   * Then take weighted average, where weights are based on proportion of people in each subpopulation.
   * This is a causal effect if, within levels of the prior OAD use variable, treatment can be thought of as randomized (i.e. ignorability given prior OAD use).
 
