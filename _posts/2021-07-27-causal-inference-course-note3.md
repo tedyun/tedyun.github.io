@@ -308,7 +308,7 @@ $$SMD = \frac{\overline{X}_{treatment} - \overline{X}_{control}}{\sqrt{\frac{s^2
 
 Note:
 * SMD does not depend on sample size.
-* Often, absolute absolute value of smd is reported.
+* Often, absolute value of smd is reported.
 * Calculate for each variable that you match on.
 * Rules of thumb:
   * Values <0.1 indicate adequate balance.
