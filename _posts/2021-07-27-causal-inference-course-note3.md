@@ -725,11 +725,11 @@ Trimming the tails makes the positivity assumption more reasonable (this prevent
 
 We can now proceed by computing a distance between the propensity score for each treated subject with every control. Then we can use nearest neighbor or optimal matching, as before.
 
-In practice, **logit** (log-odds) of the propensity score is often used, rather than the propensity score itself (i.e. match on $\text{logit}(\pi)$ rather than $\pi$). The propensity score is bounded between 0 andn 1, making many values seem similar, while the logit of the propensity score is unbounded. This transformation essentially stretches the distribution, while preserving ranks.
+In practice, **logit** (log-odds) of the propensity score is often used, rather than the propensity score itself (i.e. match on $\text{logit}(\pi)$ rather than $\pi$). The propensity score is bounded between 0 and 1, making many values seem similar, while the logit of the propensity score is unbounded. This transformation essentially stretches the distribution, while preserving ranks.
 
 ### Caliper
 
-To ensure that we do not accept any bad matches, a caliper (maximum distance that we are willing to tolerate) can be used. In practice, a common shoice for a cliper is the 0.2 times the standard deviation of logit of the propensity score. In detail:
+To ensure that we do not accept any bad matches, a caliper (maximum distance that we are willing to tolerate) can be used. In practice, a common choice for a cliper is the 0.2 times the standard deviation of logit of the propensity score. In detail:
 
 1. Estimate the propensity score (e.g. using logistic regression).
 2. Logit-transform the propensity score.
