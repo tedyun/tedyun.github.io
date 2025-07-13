@@ -221,6 +221,7 @@ A variable is an instrumental variable (IV) if:
 2. It affects the outcome only through its effect on treatment (known as the _exclusion restriction_).
 
 $$Z \rightarrow A \rightarrow Y$$
+
 $$A \leftarrow X \rightarrow Y$$
 
 If $Z$ is an IV, $Z$ must not _directly_ affect $Y$ (exclusion restriction).
@@ -228,7 +229,9 @@ If $Z$ is an IV, $Z$ must not _directly_ affect $Y$ (exclusion restriction).
 When there is unmeasured confounding,
 
 $$Z \rightarrow A \rightarrow Y$$
+
 $$A \leftarrow X \rightarrow Y$$
+
 $$A \dashleftarrow U \dashrightarrow Y$$
 
 $Z$ must not affect unmeasured confounders $U$. $Z$ cannot directly, or indirectly through its effect on $U$, affect the outcome $Y$.
