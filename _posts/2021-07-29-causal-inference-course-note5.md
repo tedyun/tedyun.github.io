@@ -213,4 +213,59 @@ How can we _estimate_ the complier average causal effect? What _assumptions_ are
 
 ## Assumptions
 
-[TODO]
+### Assumptions about IVs
+
+A variable is an instrumental variable (IV) if:
+
+1. It is associated with the treatment.
+2. It affects the outcome only through its effect on treatment (known as the _exclusion restriction_).
+
+$$Z \rightarrow A \rightarrow Y$$
+$$A \leftarrow X \rightarrow Y$$
+
+If $Z$ is an IV, $Z$ must not _directly_ affect $Y$ (exclusion restriction).
+
+When there is unmeasured confounding,
+
+$$Z \rightarrow A \rightarrow Y$$
+$$A \leftarrow X \rightarrow Y$$
+$$A \dashleftarrow U \dashrightarrow Y$$
+
+$Z$ must not affect unmeasured confounders $U$. $Z$ cannot directly, or indirectly through its effect on $U$, affect the outcome $Y$.
+
+### Realistic?
+
+IF $Z$ is random treatment assignment, are the IV assumptions met?
+
+* It should affect treatment received. (We can check this.)
+* If we think of it as a coin flip, then it should not affect the outcome or unmeasured confounders.
+  * However, if subjects are not blinded, knowledge of what they were assigned to could affect them.
+  * If clinicians are not blinded to assignment, it could affect them.
+  * Need to examine this assumption carefully for any given study.
+
+### Causal effects
+
+Assuming we have a valid IV, we are interested in using it to help us estimate the complier average causal effect:
+
+$$E(Y^{A=1} - Y^{A=0} \vert \text{compliers})$$
+
+The causal effect of treatment among subjects who only take treatment if they are randomized to $Z=1$.
+
+### Identification challenge
+
+Challenge: We are interested in compliers, but we do not know who the compliers are.
+
+### Monotonicity assumption
+
+The **monotonicity assumption** is there are _no defiers_.
+* No one consistently does the opposite of what they are told.
+* It is called monotonicity because the assumption is that the probability of treatment should increase with more encouragement.
+
+With monotonicity,
+
+| $Z$ | $A$ | $A^0$ | $A^1$ | Class |
+| - | - | - | - | - |
+| 0 | 0 | 0 | ? | Never-takers or compliers |
+| 0 | 1 | 1 | ~~?~~ 1 | Always-takers ~~or defiers~~ |
+| 1 | 0 | ~~?~~ 0 | 0 | Never-takers ~~or defiers~~ |
+| 1 | 1 | ? | 1 | Always-takers or compliers |
