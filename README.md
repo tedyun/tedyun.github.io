@@ -10,7 +10,7 @@
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 ```
-2. Check the preferred Ruby version in [this page](https://pages.github.com/versions/), install & activate that version of Ruby using `rbenv`. Note this may require some C compilers and libraries (`sudo apt install build-essential libz-dev`). For example:
+2. Check the preferred Ruby version in [this page](https://pages.github.com/versions/), install & activate that version of Ruby using `rbenv`. Note this may require some C compilers and libraries, which can be found [here](https://github.com/rbenv/ruby-build/wiki#ubuntudebianmint). For example:
 ```
 $ rbenv install 3.3.4
 $ rbenv global 3.3.4
