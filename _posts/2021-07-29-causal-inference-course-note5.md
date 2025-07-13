@@ -272,3 +272,7 @@ With monotonicity,
 | 0 | 1 | 1 | ~~?~~ 1 | Always-takers ~~or defiers~~ |
 | 1 | 0 | ~~?~~ 0 | 0 | Never-takers ~~or defiers~~ |
 | 1 | 1 | ? | 1 | Always-takers or compliers |
+
+## Causal effect identification and estimation
+
+[TODO]
